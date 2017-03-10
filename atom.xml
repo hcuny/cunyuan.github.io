@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-10T06:23:29.777Z</updated>
+  <updated>2017-03-10T06:26:24.197Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hcuny.github.io/2017/03/09/Proposal/"/>
     <id>http://hcuny.github.io/2017/03/09/Proposal/</id>
     <published>2017-03-10T04:30:30.000Z</published>
-    <updated>2017-03-10T06:23:29.777Z</updated>
+    <updated>2017-03-10T06:26:24.197Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
@@ -37,8 +37,10 @@
     
     </summary>
     
+      <category term="Research" scheme="http://hcuny.github.io/categories/Research/"/>
     
-      <category term="Research" scheme="http://hcuny.github.io/tags/Research/"/>
+    
+      <category term="Operations, Management" scheme="http://hcuny.github.io/tags/Operations-Management/"/>
     
   </entry>
   
@@ -47,7 +49,7 @@
     <link href="http://hcuny.github.io/2017/03/08/Tensor/"/>
     <id>http://hcuny.github.io/2017/03/08/Tensor/</id>
     <published>2017-03-09T01:32:35.000Z</published>
-    <updated>2017-03-08T16:18:42.487Z</updated>
+    <updated>2017-03-10T06:27:00.869Z</updated>
     
     <content type="html"><![CDATA[<p>Struggling with the second project of the Udacity course, image classification, it’s a key point to understand the process as a whole. Starting with:</p>
 <h4 id="1-What-is-a-tensor"><a href="#1-What-is-a-tensor" class="headerlink" title="1. What is a tensor?"></a>1. What is a tensor?</h4><p>First of all, consider everything in a graph mode. <br></p>
@@ -81,6 +83,8 @@
     
     </summary>
     
+      <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
+    
     
       <category term="Deep Learning" scheme="http://hcuny.github.io/tags/Deep-Learning/"/>
     
@@ -91,7 +95,7 @@
     <link href="http://hcuny.github.io/2017/03/08/SQL_query/"/>
     <id>http://hcuny.github.io/2017/03/08/SQL_query/</id>
     <published>2017-03-08T17:32:35.000Z</published>
-    <updated>2017-03-09T03:50:34.733Z</updated>
+    <updated>2017-03-10T06:27:51.355Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><ul>
 <li>What does (relational) DB bring?<ul>
@@ -139,8 +143,10 @@
     
     </summary>
     
+      <category term="Review" scheme="http://hcuny.github.io/categories/Review/"/>
     
-      <category term="Database | Interview" scheme="http://hcuny.github.io/tags/Database-Interview/"/>
+    
+      <category term="Database" scheme="http://hcuny.github.io/tags/Database/"/>
     
   </entry>
   
@@ -149,7 +155,7 @@
     <link href="http://hcuny.github.io/2017/03/08/Tree_Model_Thinking/"/>
     <id>http://hcuny.github.io/2017/03/08/Tree_Model_Thinking/</id>
     <published>2017-03-08T07:32:35.000Z</published>
-    <updated>2017-03-08T16:42:25.849Z</updated>
+    <updated>2017-03-10T06:27:48.651Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Question1-How-does-ensemble-of-different-tree-based-models-enhance-the-performance"><a href="#Question1-How-does-ensemble-of-different-tree-based-models-enhance-the-performance" class="headerlink" title="Question1: How does ensemble of different tree-based models enhance the performance?"></a>Question1: How does ensemble of different tree-based models enhance the performance?</h4><h4 id="Question2-For-important-but-also-highly-correlated-features-how-do-they-affect-performance"><a href="#Question2-For-important-but-also-highly-correlated-features-how-do-they-affect-performance" class="headerlink" title="Question2: For important but also highly correlated features, how do they affect performance?"></a>Question2: For important but also highly correlated features, how do they affect performance?</h4>]]></content>
     
@@ -158,6 +164,8 @@
       &lt;h4 id=&quot;Question1-How-does-ensemble-of-different-tree-based-models-enhance-the-performance&quot;&gt;&lt;a href=&quot;#Question1-How-does-ensemble-of-differe
     
     </summary>
+    
+      <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
     
     
       <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
