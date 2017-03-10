@@ -343,7 +343,8 @@
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
 </ul>
 <p>Given a retailer’s data across 123 stores through 47 weeks, we want to apply the Newsvendor model to estimate service level for managers in each store.</p>
-<h4 id="Model-Newsvendor-Model-general-case-summary"><a href="#Model-Newsvendor-Model-general-case-summary" class="headerlink" title="Model: Newsvendor Model general case summary."></a>Model: <a href="https://en.wikipedia.org/wiki/Newsvendor_model" target="_blank" rel="external">Newsvendor Model</a> general case summary.</h4><p><strong>E[Profit] = E[p*min(q, D)-cq]</strong>&lt; br /&gt;<br>Here p is the fixed price for each unit of demand, q is the number of units stocked(q* will be the best decision we make about inventory amount). D is a random variable with CDF F representing demand.</p>
+<p>####1. <a href="https://en.wikipedia.org/wiki/Newsvendor_model" target="_blank" rel="external">Newsvendor Model</a> general case summary.</p>
+<p><strong>E[Profit] = E[p*min(q, D)-cq]</strong><br><br>Here c, p is the fixed cost and price for each unit of demand, q is the number of units stocked(q<em> will be the best decision we make about inventory amount, it is what we’re interested in). D is a random variable with CDF F representing demand.<br>The solution q</em> satisfy: F(q*)= (p-c)/p<br><img src="/img/nvd_2.jpg" alt="Alt text" title="Illustration"></p>
 
           
         

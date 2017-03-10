@@ -99,12 +99,14 @@ Given a retailer’s data across 123 stores through 47 weeks, we want to apply t
 <meta property="og:description" content="This work is under guidance of Professor Saravanan Kesavan in UNC Kenan-Flagler Business School.
 
 Given a retailer’s data across 123 stores through 47 weeks, we want to apply the Newsvendor model to">
-<meta property="og:updated_time" content="2017-03-10T05:39:50.087Z">
+<meta property="og:image" content="http://hcuny.github.io/img/nvd_2.jpg">
+<meta property="og:updated_time" content="2017-03-10T05:57:26.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Master Thesis Proposal">
 <meta name="twitter:description" content="This work is under guidance of Professor Saravanan Kesavan in UNC Kenan-Flagler Business School.
 
 Given a retailer’s data across 123 stores through 47 weeks, we want to apply the Newsvendor model to">
+<meta name="twitter:image" content="http://hcuny.github.io/img/nvd_2.jpg">
 
 
 
@@ -343,7 +345,8 @@ Given a retailer’s data across 123 stores through 47 weeks, we want to apply t
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
 </ul>
 <p>Given a retailer’s data across 123 stores through 47 weeks, we want to apply the Newsvendor model to estimate service level for managers in each store.</p>
-<h4 id="Model-Newsvendor-Model-general-case-summary"><a href="#Model-Newsvendor-Model-general-case-summary" class="headerlink" title="Model: Newsvendor Model general case summary."></a>Model: <a href="https://en.wikipedia.org/wiki/Newsvendor_model" target="_blank" rel="external">Newsvendor Model</a> general case summary.</h4><p><strong>E[Profit] = E[p*min(q, D)-cq]</strong>&lt; br /&gt;<br>Here p is the fixed price for each unit of demand, q is the number of units stocked(q* will be the best decision we make about inventory amount). D is a random variable with CDF F representing demand.</p>
+<p>####1. <a href="https://en.wikipedia.org/wiki/Newsvendor_model" target="_blank" rel="external">Newsvendor Model</a> general case summary.</p>
+<p><strong>E[Profit] = E[p*min(q, D)-cq]</strong><br><br>Here c, p is the fixed cost and price for each unit of demand, q is the number of units stocked(q<em> will be the best decision we make about inventory amount, it is what we’re interested in). D is a random variable with CDF F representing demand.<br>The solution q</em> satisfy: F(q*)= (p-c)/p<br><img src="/img/nvd_2.jpg" alt="Alt text" title="Illustration"></p>
 
       
     </div>
@@ -435,17 +438,8 @@ Given a retailer’s data across 123 stores through 47 weeks, we want to apply t
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/self.jpg"
@@ -539,22 +533,6 @@ Given a retailer’s data across 123 stores through 47 weeks, we want to apply t
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-Newsvendor-Model-general-case-summary"><span class="nav-number">1.</span> <span class="nav-text">Model: Newsvendor Model general case summary.</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
