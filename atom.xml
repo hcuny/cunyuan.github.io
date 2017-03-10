@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-10T21:36:24.207Z</updated>
+  <updated>2017-03-10T21:50:18.809Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hcuny.github.io/2017/03/09/Proposal/"/>
     <id>http://hcuny.github.io/2017/03/09/Proposal/</id>
     <published>2017-03-10T04:30:30.000Z</published>
-    <updated>2017-03-10T21:36:24.207Z</updated>
+    <updated>2017-03-10T21:50:18.809Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
@@ -35,9 +35,12 @@
 </ul>
 </li>
 </ul>
-<h4 id="2-How-We’ll-Apply-the-Model"><a href="#2-How-We’ll-Apply-the-Model" class="headerlink" title="2. How We’ll Apply the Model"></a>2. How We’ll Apply the Model</h4><p>Different from direct application, a twist in this research is that we’re interested in the “best labor arrangement strategy”(i.e the money spent on labor) for each store, instead of the inventory amount. In the standpoint of a store manager, Similar to inventory, overly or underly arrange the labor force than the real need will bring loss. Therefore, the service level of a manager measures his/her labor arrangement strategy.</p>
-<p>For each week, the labor_goal column in the data refers to the  labor cost(often made 1-2 weeks before), and actual_labor refers to the actual optimized labor cost L* for each week. Thus, if we can get the labor cost distribution F(l), given the known L*, we can calculate the service level directly.</p>
-<p>The problem comes to how can we find the labor distribution? The idea is, now that we’re able to find the demand distribution, and if we know some relationship between the demand distribution and labor distribution, then we can find the labor distribution as well. The connection here is made by <strong>Budget Function</strong>, it takes the actual labor as input and labor goal as output. It is a measure of “how much you should have spent on labor” given the actual sale.</p>
+<h4 id="2-How-We’ll-Apply-the-Model"><a href="#2-How-We’ll-Apply-the-Model" class="headerlink" title="2. How We’ll Apply the Model"></a>2. How We’ll Apply the Model</h4><p>Different from direct application, a twist in this research is that we’re interested in the “best labor spend”(i.e the money spent on labor) for each store, instead of the inventory amount. In the standpoint of a store manager, Similar to inventory, overly or underly arrange the labor force than the real need will bring loss. Therefore, the service level of a manager measures his/her labor arrangement strategy.</p>
+<p>For each week, the labor_goal column in the data refers to the labor cost planned to be made on labor given the actual data, and actual_labor refers to the actual optimized labor cost L*. Thus, if we can get the labor cost distribution F(l), given the known L*, we can calculate the service level directly.</p>
+<p>Now problem comes to how can we find the labor cost distribution? The idea is, given that we’re able to find the demand distribution, and if we know some relationship between the demand distribution and labor distribution, then we can find the labor distribution as well. The connection here is made by <strong>Budget Function</strong>, it takes the actual labor as input and labor goal as output. This function is a measure of “how much you should have spent on labor” given the actual sale.</p>
+<ul>
+<li>Notes: Demand is completely measured by sale, thus we’re not distinguishing the two concepts. Demand is a random variable here, and we’re assuming <strong>demand ~ sale forecast + random noise</strong>, thus we’re going to find the pattern of random noise in the first place.</li>
+</ul>
 <h4 id="3-Steps-To-Go"><a href="#3-Steps-To-Go" class="headerlink" title="3. Steps To Go"></a>3. Steps To Go</h4><ul>
 <li>First thing to do is finding the demand distribution F(x) for each store.</li>
 <li>Given the labor_goal data, and sale data, find the labor budget function B.</li>
