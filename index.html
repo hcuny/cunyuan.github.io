@@ -369,8 +369,8 @@
 <p>Starting from the very basic case above, in our research, the newsvendor problem assumes only overage and underage costs (denoted C_o and C_u, respectively). It’s not hard to see that C_o ~ c, C_u ~ (p-c). Thus F(Q*)=1/(1+C_o/C_u). The ratio is referred to as “Service Level”.</p>
 <ul>
 <li>Notes: How do we get the result? Objective: minimize the loss. Let Q be the inventory amount, x is the real demand.(R.V.). Then the loss will be:<ul>
-<li>l1(Q,x) = (Q - x)C_o, if x&lt;=Q</li>
-<li>l2(Q,x) = (x - Q)C_u, if x&gt;Q<br>Then the objective function is L(Q) =  Int_x_0_Q(l1(Q,x)*f(x)) + Int_x_Q_inf(l2(Q,x)*f(x)), let L’(Q) = 0, we will get it. </li>
+<li>l1(Q, x) = (Q - x)C_o, if x&lt;=Q</li>
+<li>l2(Q, x) = (x - Q)C_u, if x&gt;Q<br>Then the objective function is L(Q) =  Int_x_0_Q( l1(Q, x)*f(x) ) + Int_x_Q_inf( l2(Q, x)*f(x) ), let L’(Q) = 0, we will get it.</li>
 </ul>
 </li>
 </ul>
