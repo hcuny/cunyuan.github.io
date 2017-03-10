@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-10T17:16:42.157Z</updated>
+  <updated>2017-03-10T17:20:54.710Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hcuny.github.io/2017/03/09/Proposal/"/>
     <id>http://hcuny.github.io/2017/03/09/Proposal/</id>
     <published>2017-03-10T04:30:30.000Z</published>
-    <updated>2017-03-10T17:16:42.157Z</updated>
+    <updated>2017-03-10T17:20:54.710Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
@@ -31,7 +31,7 @@
 <ul>
 <li>Notes: How do we get the result? Objective: minimize the loss. Let Q be the inventory amount, x is the real demand.(R.V.). Then the loss will be:<ul>
 <li>l1(Q,x) = (Q - x)C_o, if x&lt;=Q</li>
-<li>l2(Q,x) = (x - Q)C_u, if x&gt;Q<br>Then the objective function is L(Q) =  $$\int_0^Q l1(Q,x)*f(x) {\rm d}x$$<br>let</li>
+<li>l2(Q,x) = (x - Q)C_u, if x&gt;Q<br>Then the objective function is L(Q) =  Int_x_0_Q(l1(Q,x)*f(x)) + Int_x_Q_inf(l2(Q,x)*f(x)), let L’(Q) = 0, we will get it. </li>
 </ul>
 </li>
 </ul>
