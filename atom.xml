@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-08T16:18:42.487Z</updated>
+  <updated>2017-03-10T04:36:05.934Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Master Thesis Proposal</title>
+    <link href="http://hcuny.github.io/2017/03/09/Proposal/"/>
+    <id>http://hcuny.github.io/2017/03/09/Proposal/</id>
+    <published>2017-03-10T04:30:30.000Z</published>
+    <updated>2017-03-10T04:36:05.934Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;This work is under guidance of Professor &lt;a href=&quot;http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-inno
+    
+    </summary>
+    
+    
+      <category term="Research" scheme="http://hcuny.github.io/tags/Research/"/>
+    
+  </entry>
   
   <entry>
     <title>Basic Elements in TF</title>
