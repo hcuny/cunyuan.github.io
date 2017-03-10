@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-10T06:26:24.197Z</updated>
+  <updated>2017-03-10T17:14:48.436Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hcuny.github.io/2017/03/09/Proposal/"/>
     <id>http://hcuny.github.io/2017/03/09/Proposal/</id>
     <published>2017-03-10T04:30:30.000Z</published>
-    <updated>2017-03-10T06:26:24.197Z</updated>
+    <updated>2017-03-10T17:14:48.436Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
@@ -28,6 +28,13 @@
 <p>Given a retailer’s data across 123 stores through 47 weeks, we want to apply the Newsvendor model to estimate service level for managers in each store. Further research will be, to discover what kind of factors are affecting manager service level.</p>
 <h4 id="1-Newsvendor-Model-general-case-summary"><a href="#1-Newsvendor-Model-general-case-summary" class="headerlink" title="1. Newsvendor Model general case summary."></a>1. <a href="https://en.wikipedia.org/wiki/Newsvendor_model" target="_blank" rel="external">Newsvendor Model</a> general case summary.</h4><p><strong>E[Profit] = E[p*min(q, D)-cq]</strong><br>Here c, p is the fixed cost and price for each unit of demand, q is the number of units stocked(q* will be the best decision we make about inventory amount, it is what we’re interested in). D is a random variable with CDF F representing demand.<br>The solution q<em> satisfy: F(q</em>)= (p-c)/p<br><img src="/img/nvd_2.jpg" alt="Alt text" title="Illustration"></p>
 <p>Starting from the very basic case above, in our research, the newsvendor problem assumes only overage and underage costs (denoted C_o and C_u, respectively). It’s not hard to see that C_o ~ c, C_u ~ (p-c). Thus F(Q*)=1/(1+C_o/C_u). The ratio is referred to as “Service Level”.</p>
+<ul>
+<li>Notes: How do we get the result? Objective: minimize the loss. Let Q be the inventory amount, x is the real demand.(R.V.). Then the loss will be:<ul>
+<li>l1(Q,x) = (Q - x)C_o, if x&lt;=Q</li>
+<li>l2(Q,x) = (x - Q)C_u, if x&gt;Q<br>Then the objective function is L(Q) =  $\int_0^Q l1(Q,x)*f(x) {\rm d}x$<br>let</li>
+</ul>
+</li>
+</ul>
 <h4 id="2-How-we-will-apply-Newsvendor-model-in-this-research"><a href="#2-How-we-will-apply-Newsvendor-model-in-this-research" class="headerlink" title="2. How we will apply Newsvendor model in this research."></a>2. How we will apply Newsvendor model in this research.</h4>]]></content>
     
     <summary type="html">
