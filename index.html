@@ -344,7 +344,7 @@
 </ul>
 <p>Given a retailer’s data across 123 stores through 47 weeks, we want to apply the Newsvendor model to estimate service level for managers in each store.</p>
 <h4 id="1-Newsvendor-Model-general-case-summary"><a href="#1-Newsvendor-Model-general-case-summary" class="headerlink" title="1. Newsvendor Model general case summary."></a>1. <a href="https://en.wikipedia.org/wiki/Newsvendor_model" target="_blank" rel="external">Newsvendor Model</a> general case summary.</h4><p><strong>E[Profit] = E[p*min(q, D)-cq]</strong><br>Here c, p is the fixed cost and price for each unit of demand, q is the number of units stocked(q* will be the best decision we make about inventory amount, it is what we’re interested in). D is a random variable with CDF F representing demand.<br>The solution q<em> satisfy: F(q</em>)= (p-c)/p<br><img src="/img/nvd_2.jpg" alt="Alt text" title="Illustration"></p>
-<p>Starting from the very basic case above, in our research, the newsvendor problem assumes only overage and underage costs (denoted $C_o$ and $C_u$, respectively). It’s not hard to see that $C_o$ ~ c, $C_u$ ~ p-c</p>
+<p>Starting from the very basic case above, in our research, the newsvendor problem assumes only overage and underage costs (denoted $ C_o $ and $ C_u $, respectively). It’s not hard to see that $ C_o $ ~ c, $ C_u $ ~ (p-c). Thus F(Q*)=1/(1+C_o/C_u). The ratio is referred to as “Service Rate”.</p>
 
           
         
