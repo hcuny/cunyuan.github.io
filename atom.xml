@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-10T23:08:38.771Z</updated>
+  <updated>2017-03-11T19:56:51.498Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -16,11 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Comparison of Some Algorithms</title>
+    <link href="http://hcuny.github.io/2017/03/11/Comparison-of-Some-Algorithms/"/>
+    <id>http://hcuny.github.io/2017/03/11/Comparison-of-Some-Algorithms/</id>
+    <published>2017-03-11T19:54:42.000Z</published>
+    <updated>2017-03-11T19:56:51.498Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
+    
+      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Master Thesis Proposal</title>
     <link href="http://hcuny.github.io/2017/03/09/Proposal/"/>
     <id>http://hcuny.github.io/2017/03/09/Proposal/</id>
     <published>2017-03-10T04:30:30.000Z</published>
-    <updated>2017-03-10T23:08:38.771Z</updated>
+    <updated>2017-03-11T19:57:30.359Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
@@ -60,7 +80,11 @@
       <category term="Research" scheme="http://hcuny.github.io/categories/Research/"/>
     
     
-      <category term="Operations, Management" scheme="http://hcuny.github.io/tags/Operations-Management/"/>
+      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+      <category term="Operations" scheme="http://hcuny.github.io/tags/Operations/"/>
+    
+      <category term="Management" scheme="http://hcuny.github.io/tags/Management/"/>
     
   </entry>
   
@@ -115,7 +139,7 @@
     <link href="http://hcuny.github.io/2017/03/08/SQL_query/"/>
     <id>http://hcuny.github.io/2017/03/08/SQL_query/</id>
     <published>2017-03-08T17:32:35.000Z</published>
-    <updated>2017-03-11T19:47:08.895Z</updated>
+    <updated>2017-03-11T19:58:01.658Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Concept-Review"><a href="#Concept-Review" class="headerlink" title="Concept Review"></a>Concept Review</h3><ul>
 <li>What does (relational) DB bring?<ul>
@@ -180,6 +204,8 @@
     
     
       <category term="Database" scheme="http://hcuny.github.io/tags/Database/"/>
+    
+      <category term="Interview" scheme="http://hcuny.github.io/tags/Interview/"/>
     
   </entry>
   
