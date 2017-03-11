@@ -107,7 +107,7 @@ DBMS: software packages designed to store, access, manage DBs.
 
 
 In relation">
-<meta property="og:updated_time" content="2017-03-11T19:10:57.193Z">
+<meta property="og:updated_time" content="2017-03-11T19:15:42.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL queries review">
 <meta name="twitter:description" content="Concept Review
@@ -413,7 +413,7 @@ In relation">
 <li><p>Self-Joins and use subqueries as tables</p>
 </li>
 </ul>
-<h4 id="Aggregation"><a href="#Aggregation" class="headerlink" title="Aggregation"></a>Aggregation</h4><h4 id="String-manipulation-RE"><a href="#String-manipulation-RE" class="headerlink" title="String manipulation (RE)"></a>String manipulation (RE)</h4><p><strong>Keyword: Like</strong><br>| Search Expression | Interpretation |<br>| —————- | ——————- |<br>| F% | Strings beginning with F |<br>| %t | Strings ending with t |<br>| %bas% | Strings containing the substring ‘bas’ |<br>| _ <em>t</em> | Four-character strings with a t in the third position |<br>| <em> </em> <em>-</em> <em>-</em> <em> </em> _ | 11-character strings with dashes in the fourth and seventh positions |</p>
+<h4 id="Aggregation"><a href="#Aggregation" class="headerlink" title="Aggregation"></a>Aggregation</h4><h4 id="String-manipulation-RE"><a href="#String-manipulation-RE" class="headerlink" title="String manipulation (RE)"></a>String manipulation (RE)</h4><p><strong>Keyword: Like</strong><br>| Search Expression | Interpretation |<br>| ———— | ———— |<br>| F% | Strings beginning with F |<br>| %t | Strings ending with t |<br>| %bas% | Strings containing the substring ‘bas’ |<br>| _ <em>t</em> | Four-character strings with a t in the third position |</p>
 <p><strong>Keyword: REGEXP</strong><br>E.g. Find all employees whose last name starts with F or G.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> emp_id, fname, lname</div><div class="line"><span class="keyword">FROM</span> employee</div><div class="line"><span class="keyword">WHERE</span> lname REGEXP <span class="string">'^[FG]'</span>;</div></pre></td></tr></table></figure></p>
 <h4 id="Mistakes-collection-when-Writing-queries"><a href="#Mistakes-collection-when-Writing-queries" class="headerlink" title="Mistakes collection when Writing queries"></a>Mistakes collection when Writing queries</h4><ul>
 <li>If you want to generate a column/set, must select the data from table in the first place.<br><a href="https://leetcode.com/problems/customers-who-never-order/?tab=Description" target="_blank" rel="external">Demo</a>.</li>
