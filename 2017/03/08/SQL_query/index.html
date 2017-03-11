@@ -89,34 +89,34 @@
 
 
 
-<meta name="description" content="Overview
+<meta name="description" content="Concept Review
 What does (relational) DB bring?
 It’s actually a collection of info organized to afford efficient retrieval.
 DBMS: software packages designed to store, access, manage DBs.
 
 
-In relational DB:">
+In relation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL queries review">
 <meta property="og:url" content="http://hcuny.github.io/2017/03/08/SQL_query/index.html">
 <meta property="og:site_name" content="Chosen To Be">
-<meta property="og:description" content="Overview
+<meta property="og:description" content="Concept Review
 What does (relational) DB bring?
 It’s actually a collection of info organized to afford efficient retrieval.
 DBMS: software packages designed to store, access, manage DBs.
 
 
-In relational DB:">
-<meta property="og:updated_time" content="2017-03-10T06:27:51.355Z">
+In relation">
+<meta property="og:updated_time" content="2017-03-11T18:58:59.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL queries review">
-<meta name="twitter:description" content="Overview
+<meta name="twitter:description" content="Concept Review
 What does (relational) DB bring?
 It’s actually a collection of info organized to afford efficient retrieval.
 DBMS: software packages designed to store, access, manage DBs.
 
 
-In relational DB:">
+In relation">
 
 
 
@@ -373,7 +373,7 @@ In relational DB:">
       
 
       
-        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><ul>
+        <h4 id="Concept-Review"><a href="#Concept-Review" class="headerlink" title="Concept Review"></a>Concept Review</h4><ul>
 <li>What does (relational) DB bring?<ul>
 <li>It’s actually a collection of info organized to afford efficient retrieval.</li>
 <li>DBMS: software packages designed to store, access, manage DBs.</li>
@@ -406,6 +406,15 @@ In relational DB:">
 </tr>
 </tbody>
 </table>
+<h4 id="Join"><a href="#Join" class="headerlink" title="Join"></a>Join</h4><ul>
+<li><p>Be used to apply Non-Equi-Joins</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> e.emp_id, e.fname</div><div class="line"><span class="keyword">from</span> employee e <span class="keyword">Inner</span> <span class="keyword">Join</span> product p</div><div class="line"><span class="keyword">On</span> e.s_date&gt;= p.date_offer</div><div class="line"><span class="keyword">And</span> e.s_date&lt; p.date_retire</div></pre></td></tr></table></figure>
+</li>
+<li><p>Self-Joins and use subqueries as tables</p>
+</li>
+</ul>
+<h4 id="Aggregation"><a href="#Aggregation" class="headerlink" title="Aggregation"></a>Aggregation</h4><h4 id="String-manipulation-RE"><a href="#String-manipulation-RE" class="headerlink" title="String manipulation (RE)"></a>String manipulation (RE)</h4><p><strong>Keyword: Like</strong><br>| Search Expression | Interpretation     |<br>| :————- | :————- |<br>| F%   |  Strings beginning with F      |<br>| %t    |    Strings ending with t           |<br>| %bas%  |     Strings containing the substring ‘bas’   |<br>| _ <em>t</em> | Four-character strings with a t in the third position |<br>| <em> </em> <em>-</em> <em>-</em> <em> </em> _  |  11-character strings with dashes in the fourth and seventh positions   |</p>
+<p><strong>Keyword: REGEXP</strong><br>E.g. Find all employees whose last name starts with F or G.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> emp_id, fname, lname</div><div class="line"><span class="keyword">FROM</span> employee</div><div class="line"><span class="keyword">WHERE</span> lname REGEXP <span class="string">'^[FG]'</span>;</div></pre></td></tr></table></figure></p>
 <h4 id="Mistakes-collection-when-Writing-queries"><a href="#Mistakes-collection-when-Writing-queries" class="headerlink" title="Mistakes collection when Writing queries"></a>Mistakes collection when Writing queries</h4><ul>
 <li>If you want to generate a column/set, must select the data from table in the first place.<br><a href="https://leetcode.com/problems/customers-who-never-order/?tab=Description" target="_blank" rel="external">Demo</a>.</li>
 </ul>
@@ -654,7 +663,7 @@ In relational DB:">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mistakes-collection-when-Writing-queries"><span class="nav-number">2.</span> <span class="nav-text">Mistakes collection when Writing queries</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Concept-Review"><span class="nav-number">1.</span> <span class="nav-text">Concept Review</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Join"><span class="nav-number">2.</span> <span class="nav-text">Join</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aggregation"><span class="nav-number">3.</span> <span class="nav-text">Aggregation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-manipulation-RE"><span class="nav-number">4.</span> <span class="nav-text">String manipulation (RE)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mistakes-collection-when-Writing-queries"><span class="nav-number">5.</span> <span class="nav-text">Mistakes collection when Writing queries</span></a></li></ol></div>
             
 
           </div>
