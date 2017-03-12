@@ -368,6 +368,16 @@
 <h3 id="2-GLS-Generalized-Least-Square"><a href="#2-GLS-Generalized-Least-Square" class="headerlink" title="2. GLS - Generalized Least Square"></a>2. GLS - Generalized Least Square</h3><p>Here we’re not assuming errors are constant and uncorrelated, instead:<br><img src="http://chart.googleapis.com/chart?cht=tx&chl= Var(\epsilon) = \sigma^{2}\Sigma" style="border:none;"><br>Find S as the triangular matrix using the Choleski decomposition.(Square root of error covariance matrix), and reconstruct the regression function, to get constant &amp; uncorrelated error variance.</p>
 <h3 id="3-WLS-Weighted-Least-Square"><a href="#3-WLS-Weighted-Least-Square" class="headerlink" title="3. WLS - Weighted Least Square"></a>3. WLS - Weighted Least Square</h3><p>A special case of GLS, errors are uncorrelated but have non-equal variance.</p>
 <h3 id="4-PLS-Partial-Least-Square"><a href="#4-PLS-Partial-Least-Square" class="headerlink" title="4. PLS - Partial Least Square"></a>4. PLS - Partial Least Square</h3><p>Same idea as <a href="https://en.wikipedia.org/wiki/Principal_component_regression" target="_blank" rel="external">PCR</a>(Principle Component Regression), the difference is that, PLS also choose what the component is to predict Y, just as ordinary linear regression.<br><img src="/img/PLS.PNG" alt="Alt text" title="Illustration"></p>
+<h3 id="5-LARS-Least-Angle-regression"><a href="#5-LARS-Least-Angle-regression" class="headerlink" title="5. LARS - Least Angle regression"></a>5. LARS - Least Angle regression</h3><p>It’s an algorithm for computing linear regression with L1 regularization(Lasso).<br>Big idea: Move coef along the most correlated feature until another feature becomes more correlated.</p>
+<ul>
+<li>Start with all coef 0</li>
+<li>Find feature x_i most correlated with y</li>
+<li>Increase corresponding b_i, take along residual r. Stop when some x_j has much correlation with r as x_i</li>
+<li>Increase (b_i, b_j) in their joint least square direction, until some other x_m has much correlation with r.</li>
+<li>If a non-zero coef hits 0, remove it from the active set of features and recompute the joint direction.</li>
+<li>Continue until all features are in the model.<br><img src="/img/Lars.png" alt="Alt text" title="coefficient path"><br>Generally speaking, it is a forward selection algorithm implemented in Lasso mode. I’ll talk about Ridge, Lasso and ElasticNet regularizations in another article.</li>
+</ul>
+<h3 id="ALS-Alternative-Least-Square"><a href="#ALS-Alternative-Least-Square" class="headerlink" title="ALS - Alternative Least Square"></a>ALS - Alternative Least Square</h3><p>Used in collaborative filtering</p>
 
           
         
