@@ -102,7 +102,8 @@ No Commen">
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl= Var(\epsilon) = \sigma^{2}\Sigma">
 <meta property="og:image" content="http://hcuny.github.io/img/PLS.PNG">
 <meta property="og:image" content="http://hcuny.github.io/img/Lars.png">
-<meta property="og:updated_time" content="2017-03-12T05:39:26.137Z">
+<meta property="og:image" content="http://hcuny.github.io/img/als-illustration.png">
+<meta property="og:updated_time" content="2017-03-12T06:05:47.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OLS, GLS, WLS, PLS, LARS and ALS">
 <meta name="twitter:description" content="Some concepts that look similar may lead to confusion, especially when given their abbreviations. This article will try to distinguish OLS, GLS, WLS, LARS, ALS
@@ -381,7 +382,8 @@ No Commen">
 <li>If a non-zero coef hits 0, remove it from the active set of features and recompute the joint direction.</li>
 <li>Continue until all features are in the model.<br><img src="/img/Lars.png" alt="Alt text" title="coefficient path"><br>Generally speaking, it is a forward selection algorithm implemented in Lasso mode. I’ll talk about Ridge, Lasso and ElasticNet regularizations in another article.</li>
 </ul>
-<h3 id="ALS-Alternative-Least-Square"><a href="#ALS-Alternative-Least-Square" class="headerlink" title="ALS - Alternative Least Square"></a>ALS - Alternative Least Square</h3><p>Used in collaborative filtering</p>
+<h3 id="6-ALS-Alternative-Least-Square"><a href="#6-ALS-Alternative-Least-Square" class="headerlink" title="6. ALS - Alternative Least Square"></a>6. ALS - Alternative Least Square</h3><p>Used in collaborative filtering, powerful technique in building recommendation systems.<br>Here we want UV to be as close to R as possible, since U, V are too low rank, a perfect solution will be impossible. But it’s actually a good thing, which will reduce the iteration rounds of ALS.<br><img src="/img/als-illustration.png" alt="Alt text" title="coefficient path"><br>General idea of ALS: Fix one matrix to optimize another, and do iterations. It’s just like EM algorithm, our objective function here is the loss(difference) between LHS and RHS.</p>
+<p>I’ll talk about collaborative filtering along with recommendation system and RSA next time.  </p>
 
       
     </div>
@@ -625,7 +627,7 @@ No Commen">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-OLS-Ordinary-Least-Square"><span class="nav-number">1.</span> <span class="nav-text">1. OLS - Ordinary Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-GLS-Generalized-Least-Square"><span class="nav-number">2.</span> <span class="nav-text">2. GLS - Generalized Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-WLS-Weighted-Least-Square"><span class="nav-number">3.</span> <span class="nav-text">3. WLS - Weighted Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-PLS-Partial-Least-Square"><span class="nav-number">4.</span> <span class="nav-text">4. PLS - Partial Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-LARS-Least-Angle-regression"><span class="nav-number">5.</span> <span class="nav-text">5. LARS - Least Angle regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ALS-Alternative-Least-Square"><span class="nav-number">6.</span> <span class="nav-text">ALS - Alternative Least Square</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-OLS-Ordinary-Least-Square"><span class="nav-number">1.</span> <span class="nav-text">1. OLS - Ordinary Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-GLS-Generalized-Least-Square"><span class="nav-number">2.</span> <span class="nav-text">2. GLS - Generalized Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-WLS-Weighted-Least-Square"><span class="nav-number">3.</span> <span class="nav-text">3. WLS - Weighted Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-PLS-Partial-Least-Square"><span class="nav-number">4.</span> <span class="nav-text">4. PLS - Partial Least Square</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-LARS-Least-Angle-regression"><span class="nav-number">5.</span> <span class="nav-text">5. LARS - Least Angle regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-ALS-Alternative-Least-Square"><span class="nav-number">6.</span> <span class="nav-text">6. ALS - Alternative Least Square</span></a></li></ol></div>
             
 
           </div>
