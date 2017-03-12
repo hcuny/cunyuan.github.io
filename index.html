@@ -366,7 +366,9 @@
 <li>No Comment.</li>
 </ul>
 <h3 id="2-GLS-Generalized-Least-Square"><a href="#2-GLS-Generalized-Least-Square" class="headerlink" title="2. GLS - Generalized Least Square"></a>2. GLS - Generalized Least Square</h3><p>Here we’re not assuming errors are constant and uncorrelated, instead:<br><img src="http://chart.googleapis.com/chart?cht=tx&chl= Var(\epsilon) = \sigma^{2}\Sigma" style="border:none;"><br>Find S as the triangular matrix using the Choleski decomposition.(Square root of error covariance matrix), and reconstruct the regression function, to get constant &amp; uncorrelated error variance.</p>
-<h3 id="3-WLS-Weighted-Least-Square"><a href="#3-WLS-Weighted-Least-Square" class="headerlink" title="3. WLS - Weighted Least Square"></a>3. WLS - Weighted Least Square</h3>
+<h3 id="3-WLS-Weighted-Least-Square"><a href="#3-WLS-Weighted-Least-Square" class="headerlink" title="3. WLS - Weighted Least Square"></a>3. WLS - Weighted Least Square</h3><p>A special case of GLS, errors are uncorrelated but have non-equal variance.</p>
+<h3 id="4-PLS-Partial-Least-Square"><a href="#4-PLS-Partial-Least-Square" class="headerlink" title="4. PLS - Partial Least Square"></a>4. PLS - Partial Least Square</h3><p>Same idea as <a href="https://en.wikipedia.org/wiki/Principal_component_regression" target="_blank" rel="external">PCR</a>(Principle Component Regression), the difference is that, PLS also choose what the component is to predict Y, just as ordinary linear regression.<br><img src="/img/PLS.PNG" alt="Alt text" title="Illustration"></p>
+
           
         
       
