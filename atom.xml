@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-12T01:48:36.255Z</updated>
+  <updated>2017-03-12T02:02:41.507Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://hcuny.github.io/2017/03/11/Comparison-of-Some-Algorithms/"/>
     <id>http://hcuny.github.io/2017/03/11/Comparison-of-Some-Algorithms/</id>
     <published>2017-03-11T19:54:42.000Z</published>
-    <updated>2017-03-12T01:48:36.255Z</updated>
+    <updated>2017-03-12T02:02:41.507Z</updated>
     
     <content type="html"><![CDATA[<p>Some concepts that look similar may lead to confusion, especially when given their abbreviations. This article will try to distinguish <strong>OLS, GLS, WLS, LARS, ALS</strong></p>
 <h3 id="1-OLS-Ordinary-Least-Square"><a href="#1-OLS-Ordinary-Least-Square" class="headerlink" title="1. OLS - Ordinary Least Square"></a>1. OLS - Ordinary Least Square</h3><ul>
 <li>No Comment.</li>
 </ul>
-<h3 id="2-GLS-Generalized-Least-Square"><a href="#2-GLS-Generalized-Least-Square" class="headerlink" title="2. GLS - Generalized Least Square"></a>2. GLS - Generalized Least Square</h3><p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>In OLS, we’are assuming $$a^2 = \sigma{2}$$</p>
+<h3 id="2-GLS-Generalized-Least-Square"><a href="#2-GLS-Generalized-Least-Square" class="headerlink" title="2. GLS - Generalized Least Square"></a>2. GLS - Generalized Least Square</h3><p>In OLS, we’are assuming $$a^2 = \sigma_{2}$$</p>
 ]]></content>
     
     <summary type="html">
