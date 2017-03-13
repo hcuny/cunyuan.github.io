@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-13T21:16:07.165Z</updated>
+  <updated>2017-03-13T21:17:44.991Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hcuny.github.io/2017/03/13/sampling/"/>
     <id>http://hcuny.github.io/2017/03/13/sampling/</id>
     <published>2017-03-13T18:13:01.000Z</published>
-    <updated>2017-03-13T21:16:07.165Z</updated>
+    <updated>2017-03-13T21:17:44.991Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li>Why Sampling</li>
@@ -45,6 +45,8 @@
 &lt;p&gt;A misconception I used to have is that the era of big data means the end of a need for sampling, actuall
     
     </summary>
+    
+      <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
     
     
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
