@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-13T21:17:44.991Z</updated>
+  <updated>2017-03-13T21:37:37.039Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,29 +20,17 @@
     <link href="http://hcuny.github.io/2017/03/13/sampling/"/>
     <id>http://hcuny.github.io/2017/03/13/sampling/</id>
     <published>2017-03-13T18:13:01.000Z</published>
-    <updated>2017-03-13T21:17:44.991Z</updated>
+    <updated>2017-03-13T21:37:37.039Z</updated>
     
-    <content type="html"><![CDATA[<ol>
-<li>Why Sampling</li>
-</ol>
-<p>A misconception I used to have is that the era of big data means the end of a need for sampling, actually, in a Big Data project, like the Bosch production line performance prediction, our models are still developed and piloted with samples. More generally speaking, to understand a statistical task, most times we have to design experiments which will inevitably use sampling.</p>
+    <content type="html"><![CDATA[<h3 id="1-Why-Sampling"><a href="#1-Why-Sampling" class="headerlink" title="1. Why Sampling"></a>1. Why Sampling</h3><p>A misconception I used to have is that the era of big data means the end of a need for sampling, actually, in a Big Data project, like the Bosch production line performance prediction, our models are still developed and piloted with samples. More generally speaking, to understand a statistical task, most times we have to design experiments which will inevitably use sampling.</p>
 <p>A sample is drawn with the goal of measuring something(with a sample statistic), or modeling something with a statistical/machine learning model. Much of classical statistics is concerned with making inference from small samples to populations: we do that by constructing <strong>Statistic</strong>, i.e. function of sample data to measure different features of population. Naturally we need to analyze sampling distribution, it refers to the distribution of some <strong>Sample Statistic</strong>.</p>
-<ol>
-<li>Supporting Theorem</li>
-</ol>
-<p><a href="https://en.wikipedia.org/wiki/Law_of_large_numbers" target="_blank" rel="external">LLW</a><br><a href="https://en.wikipedia.org/wiki/Central_limit_theorem" target="_blank" rel="external">CLT</a></p>
-<ol>
-<li>Magic – The Bootstrap</li>
-</ol>
-<p>Think about this: you got 2 samples s1 &amp; s2 with the same size, they have the same point estimate of population mean, but std(s1)&gt;&gt;std(s2), how would you judge the accuracy of the point estimation? Obviously, you will trust s2 more. That is why bootstrap sampling works, it’s actually extracting as much information as possible from the sample.</p>
+<h3 id="2-Supporting-Theorem"><a href="#2-Supporting-Theorem" class="headerlink" title="2. Supporting Theorem"></a>2. Supporting Theorem</h3><p><a href="https://en.wikipedia.org/wiki/Law_of_large_numbers" target="_blank" rel="external">LLW</a><br><img src="/img/lln.PNG" alt="Alt text" title="Illustration"><br><a href="https://en.wikipedia.org/wiki/Central_limit_theorem" target="_blank" rel="external">CLT</a><br><img src="/img/clt.PNG" alt="Alt text" title="Illustration"></p>
+<h3 id="3-Magic-–-The-Bootstrap"><a href="#3-Magic-–-The-Bootstrap" class="headerlink" title="3. Magic – The Bootstrap"></a>3. Magic – The Bootstrap</h3><p>Think about this: you got 2 samples s1 &amp; s2 with the same size, they have the same point estimate of population mean, but std(s1)&gt;&gt;std(s2), how would you judge the accuracy of the point estimation? Obviously, you will trust s2 more. That is why bootstrap sampling works, it’s actually extracting as much information as possible from the sample.</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;ol&gt;
-&lt;li&gt;Why Sampling&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;A misconception I used to have is that the era of big data means the end of a need for sampling, actuall
+      &lt;h3 id=&quot;1-Why-Sampling&quot;&gt;&lt;a href=&quot;#1-Why-Sampling&quot; class=&quot;headerlink&quot; title=&quot;1. Why Sampling&quot;&gt;&lt;/a&gt;1. Why Sampling&lt;/h3&gt;&lt;p&gt;A misconception I us
     
     </summary>
     
@@ -107,9 +95,9 @@
       <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
     
     
-      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
-    
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
