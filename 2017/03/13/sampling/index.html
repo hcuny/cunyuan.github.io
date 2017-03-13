@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Deep Learning," />
+  <meta name="keywords" content="Statistics," />
 
 
 
@@ -89,23 +89,16 @@
 
 
 
-<meta name="description" content="Struggling with the second project of the Udacity course, image classification, it’s a key point to understand the process as a whole. Starting with:
-1. What is a tensor?First of all, consider everyth">
+<meta name="description" content="A misconception I used to have is that the era of big data means the end of a need for sampling, actually, in a Big Data project, like the Bosch production line performance prediction, our models are">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Basic Elements in TF">
-<meta property="og:url" content="http://hcuny.github.io/2017/03/08/Tensor/index.html">
+<meta property="og:title" content="sampling">
+<meta property="og:url" content="http://hcuny.github.io/2017/03/13/sampling/index.html">
 <meta property="og:site_name" content="Chosen To Be">
-<meta property="og:description" content="Struggling with the second project of the Udacity course, image classification, it’s a key point to understand the process as a whole. Starting with:
-1. What is a tensor?First of all, consider everyth">
-<meta property="og:image" content="http://hcuny.github.io/img/tensor.jpg">
-<meta property="og:image" content="http://hcuny.github.io/img/nn.png">
-<meta property="og:image" content="http://hcuny.github.io/img/mdnet.png">
-<meta property="og:updated_time" content="2017-03-10T06:27:00.869Z">
+<meta property="og:description" content="A misconception I used to have is that the era of big data means the end of a need for sampling, actually, in a Big Data project, like the Bosch production line performance prediction, our models are">
+<meta property="og:updated_time" content="2017-03-13T20:44:54.376Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Basic Elements in TF">
-<meta name="twitter:description" content="Struggling with the second project of the Udacity course, image classification, it’s a key point to understand the process as a whole. Starting with:
-1. What is a tensor?First of all, consider everyth">
-<meta name="twitter:image" content="http://hcuny.github.io/img/tensor.jpg">
+<meta name="twitter:title" content="sampling">
+<meta name="twitter:description" content="A misconception I used to have is that the era of big data means the end of a need for sampling, actually, in a Big Data project, like the Bosch production line performance prediction, our models are">
 
 
 
@@ -133,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://hcuny.github.io/2017/03/08/Tensor/"/>
+  <link rel="canonical" href="http://hcuny.github.io/2017/03/13/sampling/"/>
 
 
 
 
 
-  <title> Basic Elements in TF | Chosen To Be </title>
+  <title> sampling | Chosen To Be </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -268,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://hcuny.github.io/2017/03/08/Tensor/">
+    <link itemprop="mainEntityOfPage" href="http://hcuny.github.io/2017/03/13/sampling/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cunyuan(Anthony) Huang">
@@ -289,7 +282,7 @@
             
             
               
-                Basic Elements in TF
+                sampling
               
             
           </h1>
@@ -304,8 +297,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-08T20:32:35-05:00">
-                2017-03-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T14:13:01-04:00">
+                2017-03-13
               </time>
             
 
@@ -314,28 +307,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Study-Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Study Notes</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -362,30 +333,8 @@
       
 
       
-        <p>Struggling with the second project of the Udacity course, image classification, it’s a key point to understand the process as a whole. Starting with:</p>
-<h4 id="1-What-is-a-tensor"><a href="#1-What-is-a-tensor" class="headerlink" title="1. What is a tensor?"></a>1. What is a tensor?</h4><p>First of all, consider everything in a graph mode. <br></p>
-<p>TensorFlow is a programming system in which you <strong>represent computations</strong> as graphs. <strong>Nodes</strong> in the graph are called ops ( operations). An op takes zero or more Tensors, performs some computation, and produces zero or more Tensors. A Tensor is a typed <strong>multi-dimensional array</strong>. For example, you can represent a mini-batch of images as a 4-D array of floating point numbers with dimensions [batch, height, width, channels]</p>
-<p><img src="/img/tensor.jpg" alt="Alt text" title="different shapes of tensors"><br>Then we can claim: TensorFlow ~ Tensor + Flow <br><br>I.e. tensors (units of array-like data) flowing through nodes (different kinds of operations, inner product, sigmoid, softmax, relu, etc), all the nodes forms a neural network graph. <a href="https://github.com/hcuny/Deep-Learning-Projects-Udacity/blob/master/Projects/dlnd-your-first-neural-network.ipynb" target="_blank" rel="external">Demo</a> of a small NN.</p>
-<p><img src="/img/nn.png" alt="Alt text"></p>
-<h4 id="2-What-is-a-session"><a href="#2-What-is-a-session" class="headerlink" title="2. What is a session?"></a>2. What is a session?</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sess = tf.Session()</div><div class="line">$ sess.run(x, feed_dict=&#123;~&#125;)</div></pre></td></tr></table></figure>
-<p>It’s actually bringing the graph framework into implementation. <br><br>On the other hand, like the lazy computation of Spark RDDs, <strong>tf.placeholder()</strong> simply allocates a block of memory for future use in sess.run(), thus the computation graph/pipeline can be built ahead of any real data flow. Example of some commands that are part of the graph:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ input = tf.placeholder(tf.float32, (None, h, w, d))</div><div class="line">$ filter_weights = tf.Variable(tf.truncated_normal((H, W, in_d, out_d)))</div><div class="line">$ bias = tf.Variable(tf.zeros(conv_num_outputs))</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ conv_layer = tf.nn.conv2d(input, weight, strides=[1, 2, 2, 1], padding=<span class="string">'SAME'</span>)</div><div class="line">$ conv_layer = tf.nn.bias_add(conv_layer, bias)</div><div class="line">$ conv_layer = tf.nn.relu(conv_layer)</div><div class="line">$ conv_layer = tf.nn.max_pool( conv_layer, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding=<span class="string">'SAME'</span>)</div><div class="line">$ session.run(optimizer, feed_dict=&#123;x: feature_batch, y: label_batch, keep_prob: keep_probability&#125;)</div></pre></td></tr></table></figure>
-<h4 id="3-Why-CNN"><a href="#3-Why-CNN" class="headerlink" title="3. Why CNN?"></a>3. Why CNN?</h4><p><img src="/img/mdnet.png" alt="Alt text"></p>
-<ul>
-<li>Regular neural nets: nodes in a single layer are independent, will generate huge scale of weights.</li>
-<li>Full connectivity is a waste of “adjacent” info, number of parameters lead to overfitting.</li>
-<li>The depth of filter is just like different nodes in a single layer.(To capture different levels of info)</li>
-<li>Number of filters ~ depth of filters</li>
-<li>For the same filter (same depth), share all parameters. Example:<ul>
-<li>Input shape 32x32x3 (H, W, D_Channel)</li>
-<li>20 filters of shape 8x8x3, stride 2, padding 1.</li>
-<li>Output shape -&gt; 14x14x20</li>
-<li>No P sharing: (8x8x3+1)x(14x14x20)</li>
-<li>With P sharing: (8x8x3+1)x20</li>
-</ul>
-</li>
-</ul>
+        <p>A misconception I used to have is that the era of big data means the end of a need for sampling, actually, in a Big Data project, like the Bosch production line performance prediction, our models are still developed and piloted with samples. More generally speaking, to understand a statistical task, most times we have to design experiments which will inevitably use sampling.</p>
+<p><strong>A sample is drawn with the goal of measuring something(with a sample statistic)</strong>, or <strong>modeling something with a statistical/machine learning model</strong></p>
 
       
     </div>
@@ -409,7 +358,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+            <a href="/tags/Statistics/" rel="tag"># Statistics</a>
           
         </div>
       
@@ -422,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/08/SQL_query/" rel="next" title="SQL queries review">
-                <i class="fa fa-chevron-left"></i> SQL queries review
+              <a href="/2017/03/12/Demand-Distribution/" rel="next" title="Demand Distribution">
+                <i class="fa fa-chevron-left"></i> Demand Distribution
               </a>
             
           </div>
@@ -431,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/09/Proposal/" rel="prev" title="Master Thesis Proposal">
-                Master Thesis Proposal <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -481,17 +426,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/self2.jpg"
@@ -621,22 +557,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-What-is-a-tensor"><span class="nav-number">1.</span> <span class="nav-text">1. What is a tensor?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-What-is-a-session"><span class="nav-number">2.</span> <span class="nav-text">2. What is a session?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Why-CNN"><span class="nav-number">3.</span> <span class="nav-text">3. Why CNN?</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
