@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="Question: how many data points are adequate to estimate the sample distribution?Overall, it’s very well shaped, with a little bit long tail.But divided them into stores, take first 5 as example, we’ll">
+<meta name="description" content="Question: how many data points are adequate to estimate the sample distribution?Overall, it’s very well normal-shaped, with a little bit “long tail”.1sns.distplot(df_demand[&apos;actual_sales&apos;].values,bins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Demand Distribution">
 <meta property="og:url" content="http://hcuny.github.io/2017/03/12/Demand-Distribution/index.html">
 <meta property="og:site_name" content="Chosen To Be">
-<meta property="og:description" content="Question: how many data points are adequate to estimate the sample distribution?Overall, it’s very well shaped, with a little bit long tail.But divided them into stores, take first 5 as example, we’ll">
+<meta property="og:description" content="Question: how many data points are adequate to estimate the sample distribution?Overall, it’s very well normal-shaped, with a little bit “long tail”.1sns.distplot(df_demand[&apos;actual_sales&apos;].values,bins">
 <meta property="og:image" content="http://hcuny.github.io/img/overall_density.png">
 <meta property="og:image" content="http://hcuny.github.io/img/single5.png">
-<meta property="og:updated_time" content="2017-03-14T03:44:58.198Z">
+<meta property="og:updated_time" content="2017-03-14T03:54:26.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Demand Distribution">
-<meta name="twitter:description" content="Question: how many data points are adequate to estimate the sample distribution?Overall, it’s very well shaped, with a little bit long tail.But divided them into stores, take first 5 as example, we’ll">
+<meta name="twitter:description" content="Question: how many data points are adequate to estimate the sample distribution?Overall, it’s very well normal-shaped, with a little bit “long tail”.1sns.distplot(df_demand[&apos;actual_sales&apos;].values,bins">
 <meta name="twitter:image" content="http://hcuny.github.io/img/overall_density.png">
 
 
@@ -358,7 +358,9 @@
       
 
       
-        <h4 id="Question-how-many-data-points-are-adequate-to-estimate-the-sample-distribution"><a href="#Question-how-many-data-points-are-adequate-to-estimate-the-sample-distribution" class="headerlink" title="Question: how many data points are adequate to estimate the sample distribution?"></a>Question: how many data points are adequate to estimate the sample distribution?</h4><p>Overall, it’s very well shaped, with a little bit long tail.<br><img src="/img/overall_density.png" alt="Alt text" title="Overall"><br>But divided them into stores, take first 5 as example, we’ll find their distribution has a lot variation.<br><img src="/img/single5.png" alt="Alt text" title="5 stores"></p>
+        <h4 id="Question-how-many-data-points-are-adequate-to-estimate-the-sample-distribution"><a href="#Question-how-many-data-points-are-adequate-to-estimate-the-sample-distribution" class="headerlink" title="Question: how many data points are adequate to estimate the sample distribution?"></a>Question: how many data points are adequate to estimate the sample distribution?</h4><p>Overall, it’s very well normal-shaped, with a little bit “long tail”.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.distplot(df_demand[<span class="string">'actual_sales'</span>].values,bins=<span class="number">100</span>)</div></pre></td></tr></table></figure></p>
+<p><img src="/img/overall_density.png" alt="Alt text" title="Overall"><br>But divided them into stores, take first 5 as example, we’ll find their distribution has a lot variation.</p>
+<p><img src="/img/single5.png" alt="Alt text" title="5 stores"><br>Here we comes the question in the title. The rule of thumb is the more data you have, the better. In most cases, to get reliable distribution fitting results, you should have at least 75-100 data points available. It seems that to cluster stores will be necessary.</p>
 
       
     </div>
