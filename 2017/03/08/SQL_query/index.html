@@ -107,7 +107,7 @@ DBMS: software packages designed to store, access, manage DBs.
 
 
 In relation">
-<meta property="og:updated_time" content="2017-03-12T02:17:22.897Z">
+<meta property="og:updated_time" content="2017-03-14T21:47:14.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL queries review">
 <meta name="twitter:description" content="Concept Review
@@ -416,30 +416,11 @@ In relation">
 <li>In relational DB:<ul>
 <li><strong>Every thing is table.</strong></li>
 <li>Under the basic structure, relational algebra is working, closure &amp; optimize.</li>
-<li>Always keep in mind of algebra optimization when querying.</li>
+<li>Always keep in mind of algebra optimization when querying.<a id="more"></a>
+| DBMS | Database | Schema | Table | Attribute |<br>| — | — | — | — | — |<br>| Property Firm | House | Floor Plan | Room | Decoration |</li>
 </ul>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>DBMS</th>
-<th>Database</th>
-<th>Schema</th>
-<th>Table</th>
-<th>Attribute</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Property Firm</td>
-<td>House</td>
-<td>Floor Plan</td>
-<td>Room</td>
-<td>Decoration</td>
-</tr>
-</tbody>
-</table>
 <h3 id="Join"><a href="#Join" class="headerlink" title="Join"></a>Join</h3><ul>
 <li><p>Be used to apply Non-Equi-Joins</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> e.emp_id, e.fname</div><div class="line"><span class="keyword">from</span> employee e <span class="keyword">Inner</span> <span class="keyword">Join</span> product p</div><div class="line"><span class="keyword">On</span> e.s_date&gt;= p.date_offer</div><div class="line"><span class="keyword">And</span> e.s_date&lt; p.date_retire</div></pre></td></tr></table></figure>
