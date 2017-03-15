@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-15T01:40:50.190Z</updated>
+  <updated>2017-03-15T01:43:45.708Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,15 +20,15 @@
     <link href="http://hcuny.github.io/2017/03/14/budget-function/"/>
     <id>http://hcuny.github.io/2017/03/14/budget-function/</id>
     <published>2017-03-15T00:36:06.000Z</published>
-    <updated>2017-03-15T01:40:50.190Z</updated>
+    <updated>2017-03-15T01:43:45.708Z</updated>
     
-    <content type="html"><![CDATA[<p>Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression without any transformation.<br>First take a look at the scatter plot of all data points. It seems that<br><img src="/img/all_scatter.PNG" alt="Alt text" title="scatter plot"><br>Plot regression forms on each store, note that logically speaking budget function is designed for each store.</p>
+    <content type="html"><![CDATA[<p>Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression without any transformation.<br><a id="more"></a><br>First take a look at the scatter plot of all data points.<br><img src="/img/all_scatter.png" alt="Alt text" title="scatter plot"><br>Plot regression forms on each store, note that logically speaking budget function is designed for each store.</p>
 <p><img src="/img/sepe_reg.PNG" alt="Alt text" title="regression"><br>The question will follow that how to judge if the linear regression really works?</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression w
+      &lt;p&gt;Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression without any transformation.&lt;br&gt;
     
     </summary>
     
