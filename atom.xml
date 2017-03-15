@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-14T21:44:49.407Z</updated>
+  <updated>2017-03-15T01:40:50.190Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Budget Function</title>
+    <link href="http://hcuny.github.io/2017/03/14/budget-function/"/>
+    <id>http://hcuny.github.io/2017/03/14/budget-function/</id>
+    <published>2017-03-15T00:36:06.000Z</published>
+    <updated>2017-03-15T01:40:50.190Z</updated>
+    
+    <content type="html"><![CDATA[<p>Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression without any transformation.<br>First take a look at the scatter plot of all data points. It seems that<br><img src="/img/all_scatter.PNG" alt="Alt text" title="scatter plot"><br>Plot regression forms on each store, note that logically speaking budget function is designed for each store.</p>
+<p><img src="/img/sepe_reg.PNG" alt="Alt text" title="regression"><br>The question will follow that how to judge if the linear regression really works?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression w
+    
+    </summary>
+    
+      <category term="Research" scheme="http://hcuny.github.io/categories/Research/"/>
+    
+      <category term="Thesis" scheme="http://hcuny.github.io/categories/Research/Thesis/"/>
+    
+    
+      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+  </entry>
   
   <entry>
     <title>Summing Up Sampling</title>
@@ -45,7 +71,7 @@
     <link href="http://hcuny.github.io/2017/03/12/Demand-Distribution/"/>
     <id>http://hcuny.github.io/2017/03/12/Demand-Distribution/</id>
     <published>2017-03-12T06:09:56.000Z</published>
-    <updated>2017-03-14T21:46:29.693Z</updated>
+    <updated>2017-03-15T00:41:11.872Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Number-of-Data-Points"><a href="#Number-of-Data-Points" class="headerlink" title="Number of Data Points"></a>Number of Data Points</h4><p>Overall, it’s very well normal-shaped, with a little bit “long tail”.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.distplot(df_demand[<span class="string">'actual_sales'</span>].values,bins=<span class="number">100</span>)</div></pre></td></tr></table></figure></p>
 <p><img src="/img/overall_density.png" alt="Alt text" title="Overall"><br><a id="more"></a><br>But divided them into stores, take first 5 as example, we’ll find their distribution has a lot variation.</p>
@@ -62,6 +88,8 @@
     </summary>
     
       <category term="Research" scheme="http://hcuny.github.io/categories/Research/"/>
+    
+      <category term="Thesis" scheme="http://hcuny.github.io/categories/Research/Thesis/"/>
     
     
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
@@ -115,7 +143,7 @@
     <link href="http://hcuny.github.io/2017/03/09/Proposal/"/>
     <id>http://hcuny.github.io/2017/03/09/Proposal/</id>
     <published>2017-03-10T04:30:30.000Z</published>
-    <updated>2017-03-14T21:46:59.716Z</updated>
+    <updated>2017-03-15T00:41:17.326Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>This work is under guidance of Professor <a href="http://www.kenan-flagler.unc.edu/faculty/directory/operations-technology-and-innovation-management-otim/saravanan-kesavan" target="_blank" rel="external">Saravanan Kesavan</a> in UNC Kenan-Flagler Business School.</li>
@@ -155,6 +183,8 @@
     </summary>
     
       <category term="Research" scheme="http://hcuny.github.io/categories/Research/"/>
+    
+      <category term="Thesis" scheme="http://hcuny.github.io/categories/Research/Thesis/"/>
     
     
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
