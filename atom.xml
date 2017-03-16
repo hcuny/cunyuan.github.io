@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-15T01:43:45.708Z</updated>
+  <updated>2017-03-16T05:30:57.618Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://hcuny.github.io/2017/03/14/budget-function/"/>
     <id>http://hcuny.github.io/2017/03/14/budget-function/</id>
     <published>2017-03-15T00:36:06.000Z</published>
-    <updated>2017-03-15T01:43:45.708Z</updated>
+    <updated>2017-03-16T05:30:57.618Z</updated>
     
     <content type="html"><![CDATA[<p>Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression without any transformation.<br><a id="more"></a><br>First take a look at the scatter plot of all data points.<br><img src="/img/all_scatter.png" alt="Alt text" title="scatter plot"><br>Plot regression forms on each store, note that logically speaking budget function is designed for each store.</p>
-<p><img src="/img/sepe_reg.PNG" alt="Alt text" title="regression"><br>The question will follow that how to judge if the linear regression really works?</p>
+<p><img src="/img/sepe_reg.PNG" alt="Alt text" title="regression"><br>The question will follow that how to judge if the linear regression really works? I.e., is a linear relationship between X and y justified?</p>
 ]]></content>
     
     <summary type="html">
@@ -71,14 +71,14 @@
     <link href="http://hcuny.github.io/2017/03/12/Demand-Distribution/"/>
     <id>http://hcuny.github.io/2017/03/12/Demand-Distribution/</id>
     <published>2017-03-12T06:09:56.000Z</published>
-    <updated>2017-03-16T02:52:23.807Z</updated>
+    <updated>2017-03-16T05:38:07.059Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Number-of-Data-Points-to-Estimate"><a href="#Number-of-Data-Points-to-Estimate" class="headerlink" title="Number of Data Points to Estimate?"></a>Number of Data Points to Estimate?</h4><p>Overall, it’s very well normal-shaped, with a little bit “long tail”.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.distplot(df_demand[<span class="string">'actual_sales'</span>].values,bins=<span class="number">100</span>)</div></pre></td></tr></table></figure></p>
 <p><img src="/img/overall_density.png" alt="Alt text" title="Overall"><br><a id="more"></a><br>But divided them into stores, take first 5 as example, we’ll find their shape has a lot variation.</p>
 <p><img src="/img/single5.png" alt="Alt text" title="5 stores"><br>Now think about our logic: we’re not assuming the actual-sale value is normally distributed, which is a too strong assumption. Instead, we’re assuming the “error of plan”: (actual_sale - manager_prediction) is normally distributed for each store.</p>
-<p><img src="/img/diffall.png" alt="Alt text" title="5 stores"><br>Wonderful, it’s just beautiful as we expected. And also take a look at the error of the first 5 stores.</p>
+<p><img src="/img/diffall.png" alt="Alt text" title="5 stores"><br>Wonderful, it’s just beautiful as we expected. And also take a look at the error of the first 5 stores.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list(set(df_demand[<span class="string">'storeid'</span>].values))[:<span class="number">5</span>]:</div><div class="line">    value=df_demand[df_demand[<span class="string">'storeid'</span>]==i][<span class="string">'diff'</span>].values</div><div class="line">    sns.distplot(value,bins=<span class="number">20</span>)</div></pre></td></tr></table></figure></p>
 <p><img src="/img/diff5.png" alt="Alt text" title="5 stores"><br>Here we comes the question: how many data points is adequate to estimate distribution? The rule of thumb is the more data you have, the better. In most cases, to get reliable distribution fitting results, you should have at least 75-100 data points available. It seems that to cluster stores will be necessary.</p>
-<h4 id="Density-Estimation"><a href="#Density-Estimation" class="headerlink" title="Density Estimation"></a>Density Estimation</h4><p><a href="https://en.wikipedia.org/wiki/Kernel_density_estimation" target="_blank" rel="external">KDE</a> will be our tool for this task. Take a look at what the cdf will look like.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.kdeplot(df_demand[<span class="string">'diff'</span>].values, cumulative=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
+<h4 id="Density-Estimation"><a href="#Density-Estimation" class="headerlink" title="Density Estimation"></a>Density Estimation</h4><p><a href="https://en.wikipedia.org/wiki/Kernel_density_estimation" target="_blank" rel="external">KDE</a> will be our tool for this task. Take a look at what the cdf will look like.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">df_demand[<span class="string">'diff'</span>]=df_demand[<span class="string">'actual_sales'</span>]-df_demand[<span class="string">'sales_manageradj'</span>]</div><div class="line">sns.kdeplot(df_demand[<span class="string">'diff'</span>].values, cumulative=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
 <p><img src="/img/cdfdiff.png" alt="Alt text" title="cdf plot"><br>Use scipy to calculate the CDF value for a certain point given the kde.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">v=<span class="number">10000</span></div><div class="line">X=np.array(df_demand[<span class="string">'actual_sales'</span>].values)</div><div class="line">gkde=stats.gaussian_kde(X)</div><div class="line">gkde.integrate_box_1d(<span class="number">0</span>,v)</div></pre></td></tr></table></figure></p>
 ]]></content>
     
