@@ -100,9 +100,9 @@
 <meta property="og:image" content="http://hcuny.github.io/img/diffall.png">
 <meta property="og:image" content="http://hcuny.github.io/img/diff5.png">
 <meta property="og:image" content="http://hcuny.github.io/img/diffqq.PNG">
-<meta property="og:image" content="http://hcuny.github.io/img/noramltall.png">
+<meta property="og:image" content="http://hcuny.github.io/img/normaltall.png">
 <meta property="og:image" content="http://hcuny.github.io/img/cdfdiff.png">
-<meta property="og:updated_time" content="2017-03-16T17:57:44.721Z">
+<meta property="og:updated_time" content="2017-03-16T18:00:34.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Demand Distribution">
 <meta name="twitter:description" content="Number of Data Points to Estimate?Overall, it’s very well normal-shaped, with a little bit “long tail”.1sns.distplot(df_demand[&apos;actual_sales&apos;].values,bins=100)">
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">Post modified</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-03-16T13:57:44-04:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-03-16T14:00:34-04:00">
                 2017-03-16
               </time>
             
@@ -453,7 +453,7 @@
 <h4 id="A-Detailed-Examination"><a href="#A-Detailed-Examination" class="headerlink" title="A Detailed Examination"></a>A Detailed Examination</h4><p>To test normality of the errors, let’s see the QQ-plot, here is a good link to understand the shape of <a href="https://xiongge.shinyapps.io/QQplots/" target="_blank" rel="external">qq-plot</a>.</p>
 <p><img src="/img/diffqq.PNG" alt="Alt text" title="Q-Q Plot"><br>This graph is telling us that our error is still a bit <strong>heavy in the tail</strong>, that is the expected value of the normal distribution in large/small quantiles have a more tight range than the real data(why?). One possible explanation is that, some stores are newly opened s.t. they didn’t have much historical data, which makes their prediction less accurate &amp; lot more variation.</p>
 <p>More precise tests like Shapiro-Wilk / Kolmogorov-Smirnov are also needed:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ks_results = scipy.stats.kstest(df_demand[<span class="string">'diff'</span>], cdf=<span class="string">'norm'</span>)</div><div class="line">matrix_ks = [</div><div class="line">    [<span class="string">''</span>, <span class="string">'DF'</span>, <span class="string">'Test Statistic'</span>, <span class="string">'p-value'</span>],</div><div class="line">    [<span class="string">'Sample Data'</span>, len(df_demand[<span class="string">'diff'</span>]) - <span class="number">1</span>, ks_results[<span class="number">0</span>], ks_results[<span class="number">1</span>]]]</div><div class="line">ks_table = FF.create_table(matrix_ks, index=<span class="keyword">True</span>)</div><div class="line">py.iplot(ks_table, filename=<span class="string">'ks-table'</span>)</div></pre></td></tr></table></figure></p>
-<p><img src="/img/noramltall.png" alt="Alt text" title="Q-Q Plot"></p>
+<p><img src="/img/normaltall.png" alt="Alt text" title="Kolmogorov-Smirnov T"></p>
 <h4 id="Density-Estimation"><a href="#Density-Estimation" class="headerlink" title="Density Estimation"></a>Density Estimation</h4><p><a href="https://en.wikipedia.org/wiki/Kernel_density_estimation" target="_blank" rel="external">KDE</a> will be our tool for this task. Take a look at what the cdf will look like.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">df_demand[<span class="string">'diff'</span>]=df_demand[<span class="string">'actual_sales'</span>]-df_demand[<span class="string">'sales_manageradj'</span>]</div><div class="line">sns.kdeplot(df_demand[<span class="string">'diff'</span>].values, cumulative=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
 <p><img src="/img/cdfdiff.png" alt="Alt text" title="cdf plot"><br>Use scipy to calculate the CDF value for a certain point given the kde.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">v=<span class="number">10000</span></div><div class="line">X=np.array(df_demand[<span class="string">'actual_sales'</span>].values)</div><div class="line">gkde=stats.gaussian_kde(X)</div><div class="line">gkde.integrate_box_1d(<span class="number">0</span>,v)</div></pre></td></tr></table></figure></p>
 
