@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-16T05:30:57.618Z</updated>
+  <updated>2017-03-16T06:08:04.448Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,10 +20,13 @@
     <link href="http://hcuny.github.io/2017/03/14/budget-function/"/>
     <id>http://hcuny.github.io/2017/03/14/budget-function/</id>
     <published>2017-03-15T00:36:06.000Z</published>
-    <updated>2017-03-16T05:30:57.618Z</updated>
+    <updated>2017-03-16T06:08:04.448Z</updated>
     
-    <content type="html"><![CDATA[<p>Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression without any transformation.<br><a id="more"></a><br>First take a look at the scatter plot of all data points.<br><img src="/img/all_scatter.png" alt="Alt text" title="scatter plot"><br>Plot regression forms on each store, note that logically speaking budget function is designed for each store.</p>
-<p><img src="/img/sepe_reg.PNG" alt="Alt text" title="regression"><br>The question will follow that how to judge if the linear regression really works? I.e., is a linear relationship between X and y justified?</p>
+    <content type="html"><![CDATA[<p>Initially the budget function aims to find the relation between sale data and “labor goal”, my first thought is to do linear regression without any transformation.<br><a id="more"></a><br>First take a look at the scatter plot of all data points.</p>
+<p><img src="/img/all_scatter.png" alt="Alt text" title="scatter plot"><br>For fun, plot the overall regression plot for each store…</p>
+<p><img src="/img/totalplot.png" alt="Alt text" title="total plot"><br>Plot regression forms on each store, note that logically speaking budget function is designed for each store.</p>
+<p><img src="/img/sepe_reg.PNG" alt="Alt text" title="regression"><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.lmplot(x=<span class="string">"actual_sales"</span>, y=<span class="string">"labor_goal"</span>, col=<span class="string">"storeid"</span>, data=df_demand, size=<span class="number">3.5</span>,col_wrap=<span class="number">3</span>,aspect=<span class="number">1</span>)</div></pre></td></tr></table></figure></p>
+<p>The question will follow that how to judge if the linear regression really works? I.e., is a linear relationship between X and y justified?</p>
 ]]></content>
     
     <summary type="html">
