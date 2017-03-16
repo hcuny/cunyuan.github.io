@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-16T06:12:06.698Z</updated>
+  <updated>2017-03-16T18:47:32.809Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Store Clustering</title>
+    <link href="http://hcuny.github.io/2017/03/16/Store-Clustering/"/>
+    <id>http://hcuny.github.io/2017/03/16/Store-Clustering/</id>
+    <published>2017-03-16T18:44:20.000Z</published>
+    <updated>2017-03-16T18:47:32.809Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Clustering-by-geographic-data"><a href="#Clustering-by-geographic-data" class="headerlink" title="Clustering by geographic data"></a>Clustering by geographic data</h3><h3 id="Clustering-directly-by-Sale-performance"><a href="#Clustering-directly-by-Sale-performance" class="headerlink" title="Clustering directly by Sale performance"></a>Clustering directly by Sale performance</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Clustering-by-geographic-data&quot;&gt;&lt;a href=&quot;#Clustering-by-geographic-data&quot; class=&quot;headerlink&quot; title=&quot;Clustering by geographic data&quot;&gt;&lt;/a
+    
+    </summary>
+    
+      <category term="Research" scheme="http://hcuny.github.io/categories/Research/"/>
+    
+      <category term="Thesis" scheme="http://hcuny.github.io/categories/Research/Thesis/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
+    
+      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+  </entry>
   
   <entry>
     <title>Budget Function</title>
@@ -74,7 +100,7 @@
     <link href="http://hcuny.github.io/2017/03/12/Demand-Distribution/"/>
     <id>http://hcuny.github.io/2017/03/12/Demand-Distribution/</id>
     <published>2017-03-12T06:09:56.000Z</published>
-    <updated>2017-03-16T18:35:45.442Z</updated>
+    <updated>2017-03-16T18:37:35.505Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Number-of-Data-Points-to-Estimate"><a href="#Number-of-Data-Points-to-Estimate" class="headerlink" title="Number of Data Points to Estimate?"></a>Number of Data Points to Estimate?</h4><p>Overall, it’s very well normal-shaped, with a little bit “long tail”.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.distplot(df_demand[<span class="string">'actual_sales'</span>].values,bins=<span class="number">100</span>)</div></pre></td></tr></table></figure></p>
 <p><img src="/img/overall_density.png" alt="Alt text" title="Overall"><br><a id="more"></a><br>But divided them into stores, take first 5 as example, we’ll find their shape has a lot variation.</p>
