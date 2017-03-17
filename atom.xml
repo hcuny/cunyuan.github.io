@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-16T19:23:57.484Z</updated>
+  <updated>2017-03-17T21:27:51.240Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,9 +20,14 @@
     <link href="http://hcuny.github.io/2017/03/16/Summing-Up-Clustering/"/>
     <id>http://hcuny.github.io/2017/03/16/Summing-Up-Clustering/</id>
     <published>2017-03-16T19:22:43.000Z</published>
-    <updated>2017-03-16T19:23:57.484Z</updated>
+    <updated>2017-03-17T21:27:51.240Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1. Overview"></a>1. Overview</h2><p>Clustering algorithm types<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">All types</div><div class="line">│   README.md</div><div class="line">│   file001.txt    </div><div class="line">│</div><div class="line">└───folder1</div><div class="line">│   │   file011.txt</div><div class="line">│   │   file012.txt</div><div class="line">│   │</div><div class="line">│   └───subfolder1</div><div class="line">│       │   file111.txt</div><div class="line">│       │   file112.txt</div><div class="line">│       │   ...</div><div class="line">│   </div><div class="line">└───folder2</div><div class="line">    │   file021.txt</div><div class="line">    │   file022.txt</div></pre></td></tr></table></figure></p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;1-Overview&quot;&gt;&lt;a href=&quot;#1-Overview&quot; class=&quot;headerlink&quot; title=&quot;1. Overview&quot;&gt;&lt;/a&gt;1. Overview&lt;/h2&gt;&lt;p&gt;Clustering algorithm types&lt;br&gt;&lt;figur
     
     </summary>
     
@@ -55,9 +60,9 @@
       <category term="Thesis" scheme="http://hcuny.github.io/categories/Research/Thesis/"/>
     
     
-      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
-    
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -190,9 +195,9 @@
       <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
     
     
-      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
-    
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
