@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Summing Up Clustering]]></title>
       <url>%2F2017%2F03%2F16%2FSumming-Up-Clustering%2F</url>
-      <content type="text"><![CDATA[1. OverviewClustering algorithm types12345678910111213141516All types│ README.md│ file001.txt │└───folder1│ │ file011.txt│ │ file012.txt│ ││ └───subfolder1│ │ file111.txt│ │ file112.txt│ │ ...│ └───folder2 │ file021.txt │ file022.txt]]></content>
+      <content type="text"><![CDATA[1. OverviewClustering algorithm types1234567891011121314All types│———Prototype Based: point assignment│ | | |———Centroid: distance metric applied to center of a subgroup| || |———Medoid: |└─── Hierarchical Based│ ││ │———Agglomeration│ ││ └───Division│ └───Density Based 2. Agglomerative algorithmsAgglomerative algorithms start from singletons, and they differ because of the strategy used to merge 2 clusters, i.e. the metric used to calculate the distance between 2 clusters. Let’s see different strategies of merging clusters. Single Link(MIN): find all min distance between any 2 points from two clusters, and compare. Min(min(2clusters)) Complete Link(MAX): find all max distance between any 2 points from two clusters. Min(max(2clusters)) Group Average: keep updating the centroid of each cluster. Min(d(2centroid)) Ward’s Method: track the increase in squared error when merged. Min(Increase_SE(2clusters))]]></content>
     </entry>
 
     

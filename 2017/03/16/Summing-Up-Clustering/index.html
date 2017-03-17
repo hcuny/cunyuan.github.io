@@ -89,16 +89,16 @@
 
 
 
-<meta name="description" content="1. OverviewClustering algorithm types12345678910111213141516All types│   README.md│   file001.txt    │└───folder1│   │   file011.txt│   │   file012.txt│   ││   └───subfolder1│       │   file111.txt│">
+<meta name="description" content="1. OverviewClustering algorithm types1234567891011121314All types│———Prototype Based: point assignment│   |   |   |———Centroid: distance metric applied to center of a subgroup|   ||   |———Medoid:  |└─">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Summing Up Clustering">
 <meta property="og:url" content="http://hcuny.github.io/2017/03/16/Summing-Up-Clustering/index.html">
 <meta property="og:site_name" content="Chosen To Be">
-<meta property="og:description" content="1. OverviewClustering algorithm types12345678910111213141516All types│   README.md│   file001.txt    │└───folder1│   │   file011.txt│   │   file012.txt│   ││   └───subfolder1│       │   file111.txt│">
-<meta property="og:updated_time" content="2017-03-17T21:27:51.240Z">
+<meta property="og:description" content="1. OverviewClustering algorithm types1234567891011121314All types│———Prototype Based: point assignment│   |   |   |———Centroid: distance metric applied to center of a subgroup|   ||   |———Medoid:  |└─">
+<meta property="og:updated_time" content="2017-03-17T21:55:50.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summing Up Clustering">
-<meta name="twitter:description" content="1. OverviewClustering algorithm types12345678910111213141516All types│   README.md│   file001.txt    │└───folder1│   │   file011.txt│   │   file012.txt│   ││   └───subfolder1│       │   file111.txt│">
+<meta name="twitter:description" content="1. OverviewClustering algorithm types1234567891011121314All types│———Prototype Based: point assignment│   |   |   |———Centroid: distance metric applied to center of a subgroup|   ||   |———Medoid:  |└─">
 
 
 
@@ -354,7 +354,7 @@
               
                 <span class="post-meta-item-text">Post modified</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-03-17T17:27:51-04:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-03-17T17:55:50-04:00">
                 2017-03-17
               </time>
             
@@ -403,7 +403,7 @@
                     <span class="post-meta-item-text">Words count in article</span>
                   
                     <span title="Words count in article" }}">
-                      27
+                      130
                     </span>
               
 
@@ -426,7 +426,14 @@
       
 
       
-        <h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1. Overview"></a>1. Overview</h2><p>Clustering algorithm types<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">All types</div><div class="line">│   README.md</div><div class="line">│   file001.txt    </div><div class="line">│</div><div class="line">└───folder1</div><div class="line">│   │   file011.txt</div><div class="line">│   │   file012.txt</div><div class="line">│   │</div><div class="line">│   └───subfolder1</div><div class="line">│       │   file111.txt</div><div class="line">│       │   file112.txt</div><div class="line">│       │   ...</div><div class="line">│   </div><div class="line">└───folder2</div><div class="line">    │   file021.txt</div><div class="line">    │   file022.txt</div></pre></td></tr></table></figure></p>
+        <h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1. Overview"></a>1. Overview</h2><p>Clustering algorithm types<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">All types</div><div class="line">│———Prototype Based: point assignment</div><div class="line">│   |   </div><div class="line">|   |———Centroid: distance metric applied to center of a subgroup</div><div class="line">|   |</div><div class="line">|   |———Medoid:  </div><div class="line">|</div><div class="line">└─── Hierarchical Based</div><div class="line">│   │</div><div class="line">│   │———Agglomeration</div><div class="line">│   │</div><div class="line">│   └───Division</div><div class="line">│   </div><div class="line">└───Density Based</div></pre></td></tr></table></figure></p>
+<h2 id="2-Agglomerative-algorithms"><a href="#2-Agglomerative-algorithms" class="headerlink" title="2. Agglomerative algorithms"></a>2. Agglomerative algorithms</h2><p>Agglomerative algorithms start from singletons, and they differ because of the strategy used to merge 2 clusters, i.e. the metric used to calculate the distance between 2 clusters. Let’s see different strategies of merging clusters.</p>
+<ul>
+<li>Single Link(MIN): find all min distance between any 2 points from two clusters, and compare. Min(min(2clusters))</li>
+<li>Complete Link(MAX): find all max distance between any 2 points from two clusters. Min(max(2clusters))</li>
+<li>Group Average: keep updating the centroid of each cluster. Min(d(2centroid))</li>
+<li>Ward’s Method: track the increase in squared error when merged. Min(Increase_SE(2clusters))</li>
+</ul>
 
       
     </div>
@@ -675,7 +682,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Overview"><span class="nav-number">1.</span> <span class="nav-text">1. Overview</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Overview"><span class="nav-number">1.</span> <span class="nav-text">1. Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Agglomerative-algorithms"><span class="nav-number">2.</span> <span class="nav-text">2. Agglomerative algorithms</span></a></li></ol></div>
             
 
           </div>
