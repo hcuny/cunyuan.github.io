@@ -358,7 +358,7 @@
               
                 <span class="post-meta-item-text">Post modified</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-03-17T17:55:50-04:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-03-17T22:06:15-04:00">
                 2017-03-17
               </time>
             
@@ -407,7 +407,7 @@
                     <span class="post-meta-item-text">Words count in article</span>
                   
                     <span title="Words count in article" }}">
-                      130
+                      349
                     </span>
               
 
@@ -432,13 +432,24 @@
       
         
           
-            <h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1. Overview"></a>1. Overview</h2><p>Clustering algorithm types<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">All types</div><div class="line">│———Prototype Based: point assignment</div><div class="line">│   |   </div><div class="line">|   |———Centroid: distance metric applied to center of a subgroup</div><div class="line">|   |</div><div class="line">|   |———Medoid:  </div><div class="line">|</div><div class="line">└─── Hierarchical Based</div><div class="line">│   │</div><div class="line">│   │———Agglomeration</div><div class="line">│   │</div><div class="line">│   └───Division</div><div class="line">│   </div><div class="line">└───Density Based</div></pre></td></tr></table></figure></p>
+            <h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1. Overview"></a>1. Overview</h2><p>Clustering algorithm types<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">All types</div><div class="line">│———Prototype Based: point assignment</div><div class="line">│   |   </div><div class="line">|   |———Centroids: distance metric applied to center of a subgroup</div><div class="line">|   |</div><div class="line">|   |———Medoids: representative point of the graph  </div><div class="line">|</div><div class="line">└─── Hierarchical Based</div><div class="line">│   │</div><div class="line">│   │———Agglomeration</div><div class="line">│   │</div><div class="line">│   └───Division</div><div class="line">│   </div><div class="line">└───Density Based</div></pre></td></tr></table></figure></p>
 <h2 id="2-Agglomerative-algorithms"><a href="#2-Agglomerative-algorithms" class="headerlink" title="2. Agglomerative algorithms"></a>2. Agglomerative algorithms</h2><p>Agglomerative algorithms start from singletons, and they differ because of the strategy used to merge 2 clusters, i.e. the metric used to calculate the distance between 2 clusters. Let’s see different strategies of merging clusters.</p>
 <ul>
-<li>Single Link(MIN): find all min distance between any 2 points from two clusters, and compare. Min(min(2clusters))</li>
-<li>Complete Link(MAX): find all max distance between any 2 points from two clusters. Min(max(2clusters))</li>
-<li>Group Average: keep updating the centroid of each cluster. Min(d(2centroid))</li>
-<li>Ward’s Method: track the increase in squared error when merged. Min(Increase_SE(2clusters))</li>
+<li>Single Link(MIN): find all min distance between any 2 points from two clusters, and compare. <strong>Min(min(2clusters))</strong><br>Time complexity O(n^2), we do not need to recompute the pairs each time.</li>
+<li>Complete Link(MAX): find all max distance between any 2 points from two clusters. <strong>Min(max(2clusters))</strong><br>Time complexity O(n^2 log n), consider the first merge, compute each pair &amp; sort.</li>
+<li>Group Average: keep updating the centroid of each cluster. <strong>Min(d(2centroid))</strong></li>
+<li>Ward’s Method: track the increase in squared error when merged. <strong>Min(Increase_SE(2clusters))</strong></li>
+</ul>
+<p>Real example from the retailer data:<br><img src="/img/aggclustering.png," alt="Alt text" title="Agglomerative Clustering"></p>
+<h2 id="3-Divisive-algorithms"><a href="#3-Divisive-algorithms" class="headerlink" title="3. Divisive algorithms"></a>3. Divisive algorithms</h2><p>Interestingly connected with MST, just consider the whole graph made up of weights(distance between 2 clusters), first find the MST, and break link corresponding to the largest distance.</p>
+<h2 id="4-K-means-A-better-start"><a href="#4-K-means-A-better-start" class="headerlink" title="4. K-means: A better start"></a>4. K-means: A better start</h2><p>When Initializing k centroids, we’ll not do it randomly, instead:</p>
+<blockquote>
+<p>Pick one point randomly into the active set s while len(s) &lt;k, add a point whose minimum distance from s is maximized.  </p>
+</blockquote>
+<p>Then we’ll follow the normal process, assign each point to the nearest centroid &amp; update the centroids. Note that the global minimization function is min(SSE) = sum(sum(SSE each cluster))</p>
+<h2 id="5-Find-the-best-k"><a href="#5-Find-the-best-k" class="headerlink" title="5. Find the best k?"></a>5. Find the best k?</h2><p><strong>Elbow Method</strong> – graphically.<br><img src="/img/elbow.png," alt="Alt text" title="Elbow Method"></p>
+<h2 id="6-Some-thinking"><a href="#6-Some-thinking" class="headerlink" title="6. Some thinking"></a>6. Some thinking</h2><ul>
+<li>Hierarchical clustering is fast because of its greedy nature, the process is very much like constructing a Huffman tree. However, we don’t have a global objective function, which means in each merge decision, it’s not made from a globally optimized point of view, the resulting clusters are not even stable. I think this is the key difference distinguishing it from k-means.</li>
 </ul>
 
           
