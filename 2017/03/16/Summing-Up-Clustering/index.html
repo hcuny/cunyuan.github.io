@@ -95,13 +95,13 @@
 <meta property="og:url" content="http://hcuny.github.io/2017/03/16/Summing-Up-Clustering/index.html">
 <meta property="og:site_name" content="Chosen To Be">
 <meta property="og:description" content="1. OverviewClustering algorithm types1234567891011121314All types│———Prototype Based: point assignment│   |   |   |———Centroids: distance metric applied to center of a subgroup|   ||   |———Medoids: re">
-<meta property="og:image" content="http://hcuny.github.io/img/aggclustering.png,">
-<meta property="og:image" content="http://hcuny.github.io/img/elbow.png,">
-<meta property="og:updated_time" content="2017-03-18T02:06:15.506Z">
+<meta property="og:image" content="http://hcuny.github.io/img/aggclustering.png">
+<meta property="og:image" content="http://hcuny.github.io/img/elbow.png">
+<meta property="og:updated_time" content="2017-03-18T02:07:55.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summing Up Clustering">
 <meta name="twitter:description" content="1. OverviewClustering algorithm types1234567891011121314All types│———Prototype Based: point assignment│   |   |   |———Centroids: distance metric applied to center of a subgroup|   ||   |———Medoids: re">
-<meta name="twitter:image" content="http://hcuny.github.io/img/aggclustering.png,">
+<meta name="twitter:image" content="http://hcuny.github.io/img/aggclustering.png">
 
 
 
@@ -357,7 +357,7 @@
               
                 <span class="post-meta-item-text">Post modified</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-03-17T22:06:15-04:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-03-17T22:07:55-04:00">
                 2017-03-17
               </time>
             
@@ -437,14 +437,14 @@
 <li>Group Average: keep updating the centroid of each cluster. <strong>Min(d(2centroid))</strong></li>
 <li>Ward’s Method: track the increase in squared error when merged. <strong>Min(Increase_SE(2clusters))</strong></li>
 </ul>
-<p>Real example from the retailer data:<br><img src="/img/aggclustering.png," alt="Alt text" title="Agglomerative Clustering"></p>
+<p>Real example from the retailer data:<br><img src="/img/aggclustering.png" alt="Alt text" title="Agglomerative Clustering"></p>
 <h2 id="3-Divisive-algorithms"><a href="#3-Divisive-algorithms" class="headerlink" title="3. Divisive algorithms"></a>3. Divisive algorithms</h2><p>Interestingly connected with MST, just consider the whole graph made up of weights(distance between 2 clusters), first find the MST, and break link corresponding to the largest distance.</p>
 <h2 id="4-K-means-A-better-start"><a href="#4-K-means-A-better-start" class="headerlink" title="4. K-means: A better start"></a>4. K-means: A better start</h2><p>When Initializing k centroids, we’ll not do it randomly, instead:</p>
 <blockquote>
 <p>Pick one point randomly into the active set s while len(s) &lt;k, add a point whose minimum distance from s is maximized.  </p>
 </blockquote>
 <p>Then we’ll follow the normal process, assign each point to the nearest centroid &amp; update the centroids. Note that the global minimization function is min(SSE) = sum(sum(SSE each cluster))</p>
-<h2 id="5-Find-the-best-k"><a href="#5-Find-the-best-k" class="headerlink" title="5. Find the best k?"></a>5. Find the best k?</h2><p><strong>Elbow Method</strong> – graphically.<br><img src="/img/elbow.png," alt="Alt text" title="Elbow Method"></p>
+<h2 id="5-Find-the-best-k"><a href="#5-Find-the-best-k" class="headerlink" title="5. Find the best k?"></a>5. Find the best k?</h2><p><strong>Elbow Method</strong> – graphically.<br><img src="/img/elbow.png" alt="Alt text" title="Elbow Method"></p>
 <h2 id="6-Some-thinking"><a href="#6-Some-thinking" class="headerlink" title="6. Some thinking"></a>6. Some thinking</h2><ul>
 <li>Hierarchical clustering is fast because of its greedy nature, the process is very much like constructing a Huffman tree. However, we don’t have a global objective function, which means in each merge decision, it’s not made from a globally optimized point of view, the resulting clusters are not even stable. I think this is the key difference distinguishing it from k-means.</li>
 </ul>
