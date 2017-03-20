@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-20T19:30:46.806Z</updated>
+  <updated>2017-03-20T19:37:44.803Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://hcuny.github.io/2017/03/16/Summing-Up-Clustering/"/>
     <id>http://hcuny.github.io/2017/03/16/Summing-Up-Clustering/</id>
     <published>2017-03-16T19:22:43.000Z</published>
-    <updated>2017-03-20T19:30:46.806Z</updated>
+    <updated>2017-03-20T19:37:44.803Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1. Overview"></a>1. Overview</h2><p>Clustering algorithm types<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">All types</div><div class="line">│———Prototype Based: point assignment</div><div class="line">│   |   </div><div class="line">|   |———Centroids: distance metric applied to center of a subgroup</div><div class="line">|   |</div><div class="line">|   |———Medoids: representative point of the graph  </div><div class="line">|</div><div class="line">└─── Hierarchical Based</div><div class="line">│   │</div><div class="line">│   │———Agglomeration</div><div class="line">│   │</div><div class="line">│   └───Division</div><div class="line">│   </div><div class="line">└───Density Based</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h2 id="2-Agglomerative-algorithms"><a href="#2-Agglomerative-algorithms" class="headerlink" title="2. Agglomerative algorithms"></a>2. Agglomerative algorithms</h2><p>Agglomerative algorithms start from singletons, and they differ because of the strategy used to merge 2 clusters, i.e. the metric used to calculate the distance between 2 clusters. Let’s see different strategies of merging clusters.</p>
 <ul>
 <li>Single Link(MIN): find all min distance between any 2 points from two clusters, and compare. <strong>Min(min(2clusters))</strong><br>Time complexity O(n^2), we do not need to recompute the pairs each time.</li>
@@ -40,20 +41,24 @@
 <h2 id="5-Find-the-best-k"><a href="#5-Find-the-best-k" class="headerlink" title="5. Find the best k?"></a>5. Find the best k?</h2><p><strong>Elbow Method</strong> – graphically.<br><img src="/img/elbow.png" alt="Alt text" title="Elbow Method"><br>Note: this is typically used in K-means for the case that K is unknown, but in the implementation of the algorithm, we shall assign a K value in advance. (Q: We can also use it in Hierarchical?)<br>For Hierarchical clustering, the process can stop when there’re a fixed number of clusters left, or we can stop until there is no further compact merge, which means we need to define a threshold for the merged diameter/radius.</p>
 <h2 id="6-Some-thinking"><a href="#6-Some-thinking" class="headerlink" title="6. Some thinking"></a>6. Some thinking</h2><ul>
 <li>Hierarchical clustering is relatively fast because of its greedy nature, the process is very much like constructing a Huffman tree. However, we don’t have a global objective function, which means in each merge decision, it’s not made from a globally optimized point of view, the resulting clusters are not even stable. I think this is the key difference distinguishing it from k-means.</li>
-<li>Computation complexity for hierarchical clustering:<blockquote>
+<li><p>Computation complexity for hierarchical clustering:</p>
+<blockquote>
 <p>In the basic setting, obviously it’s O(n^2)+O((n-1)^2)+O((n-2)^2)… = O(n^3)<br>Now introduce a improved one: initial step: O(n^2), Form the pairs into a priority queue (constant time to find pairs to merge), which takes O(n^2). Here’s the trick: when decide to merge C &amp; D, remove from the priority queue all entries involving C or D (Deletion O(log n), at most 2n deletions). Recompute the pair distance and insert (O(log n) for insertion, and at most n insertions). Thus, overall it’s O(n^2)+O(n^2)+O(n*nlog n)=O(n^2log n).</p>
 </blockquote>
 </li>
-</ul>
-<ul>
-<li>Computation complexity for K-means:</li>
-<li>Ward’s method can be used as a robust method of Initializing a K-means clustering.</li>
+<li><p>Computation complexity for K-means:</p>
+<blockquote>
+<p>Global optimization function NP Hard. The running time of Lloyd’s algorithm is naively O(nkdi), where n is the number of d-dimensional vectors, k the number of clusters and i the number of iterations needed until convergence.</p>
+</blockquote>
+</li>
+<li><p>Ward’s method can be used as a robust method of Initializing a K-means clustering.</p>
+</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1-Overview&quot;&gt;&lt;a href=&quot;#1-Overview&quot; class=&quot;headerlink&quot; title=&quot;1. Overview&quot;&gt;&lt;/a&gt;1. Overview&lt;/h2&gt;&lt;p&gt;Clustering algorithm types&lt;br&gt;&lt;figur
+      &lt;h2 id=&quot;1-Overview&quot;&gt;&lt;a href=&quot;#1-Overview&quot; class=&quot;headerlink&quot; title=&quot;1. Overview&quot;&gt;&lt;/a&gt;1. Overview&lt;/h2&gt;&lt;p&gt;Clustering algorithm types&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;All types&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│———Prototype Based: point assignment&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   |   &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |———Centroids: distance metric applied to center of a subgroup&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   |———Medoids: representative point of the graph  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└─── Hierarchical Based&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   │&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   │———Agglomeration&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   │&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   └───Division&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└───Density Based&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
