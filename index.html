@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">Post modified</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-03-18T01:27:20-04:00">
-                2017-03-18
+              <time title="Post modified" itemprop="dateModified" datetime="2017-03-20T15:06:12-04:00">
+                2017-03-20
               </time>
             
           </span>
@@ -407,7 +407,7 @@
                     <span class="post-meta-item-text">Words count in article</span>
                   
                     <span title="Words count in article" }}">
-                      366
+                      481
                     </span>
               
 
@@ -447,9 +447,16 @@
 <p>Pick one point randomly into the active set s while len(s) &lt;k, add a point whose minimum distance from s is maximized.  </p>
 </blockquote>
 <p>Then we’ll follow the normal process, assign each point to the nearest centroid &amp; update the centroids. Note that the global minimization function is min(SSE) = sum(sum(SSE each cluster))</p>
-<h2 id="5-Find-the-best-k"><a href="#5-Find-the-best-k" class="headerlink" title="5. Find the best k?"></a>5. Find the best k?</h2><p><strong>Elbow Method</strong> – graphically.<br><img src="/img/elbow.png" alt="Alt text" title="Elbow Method"></p>
+<h2 id="5-Find-the-best-k"><a href="#5-Find-the-best-k" class="headerlink" title="5. Find the best k?"></a>5. Find the best k?</h2><p><strong>Elbow Method</strong> – graphically.<br><img src="/img/elbow.png" alt="Alt text" title="Elbow Method"><br>Note: this is typically used in K-means for the case that K is unknown, but in the implementation of the algorithm, we shall assign a K value in advance. (Q: We can also use it in Hierarchical?)<br>For Hierarchical clustering, the process can stop when there’re a fixed number of clusters left, or we can stop until there is no further compact merge, which means we need to define a threshold for the merged diameter/radius.</p>
 <h2 id="6-Some-thinking"><a href="#6-Some-thinking" class="headerlink" title="6. Some thinking"></a>6. Some thinking</h2><ul>
-<li>Hierarchical clustering is fast because of its greedy nature, the process is very much like constructing a Huffman tree. However, we don’t have a global objective function, which means in each merge decision, it’s not made from a globally optimized point of view, the resulting clusters are not even stable. I think this is the key difference distinguishing it from k-means.</li>
+<li>Hierarchical clustering is relatively fast because of its greedy nature, the process is very much like constructing a Huffman tree. However, we don’t have a global objective function, which means in each merge decision, it’s not made from a globally optimized point of view, the resulting clusters are not even stable. I think this is the key difference distinguishing it from k-means.</li>
+<li>Computation complexity for hierarchical clustering:<blockquote>
+<p>In the basic setting, obviously it’s O(n^2)+O((n-1)^2)+O((n-2)^2)… = O(n^3)<br>Now introduce a improved one: </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>Computation complexity for K-means:</li>
 <li>Ward’s method can be used as a robust method of Initializing a K-means clustering.</li>
 </ul>
 
