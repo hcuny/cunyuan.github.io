@@ -358,7 +358,7 @@
               
                 <span class="post-meta-item-text">Post modified</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-03-20T15:06:12-04:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-03-20T15:30:46-04:00">
                 2017-03-20
               </time>
             
@@ -407,7 +407,7 @@
                     <span class="post-meta-item-text">Words count in article</span>
                   
                     <span title="Words count in article" }}">
-                      481
+                      568
                     </span>
               
 
@@ -451,7 +451,7 @@
 <h2 id="6-Some-thinking"><a href="#6-Some-thinking" class="headerlink" title="6. Some thinking"></a>6. Some thinking</h2><ul>
 <li>Hierarchical clustering is relatively fast because of its greedy nature, the process is very much like constructing a Huffman tree. However, we don’t have a global objective function, which means in each merge decision, it’s not made from a globally optimized point of view, the resulting clusters are not even stable. I think this is the key difference distinguishing it from k-means.</li>
 <li>Computation complexity for hierarchical clustering:<blockquote>
-<p>In the basic setting, obviously it’s O(n^2)+O((n-1)^2)+O((n-2)^2)… = O(n^3)<br>Now introduce a improved one: </p>
+<p>In the basic setting, obviously it’s O(n^2)+O((n-1)^2)+O((n-2)^2)… = O(n^3)<br>Now introduce a improved one: initial step: O(n^2), Form the pairs into a priority queue (constant time to find pairs to merge), which takes O(n^2). Here’s the trick: when decide to merge C &amp; D, remove from the priority queue all entries involving C or D (Deletion O(log n), at most 2n deletions). Recompute the pair distance and insert (O(log n) for insertion, and at most n insertions). Thus, overall it’s O(n^2)+O(n^2)+O(n*nlog n)=O(n^2log n).</p>
 </blockquote>
 </li>
 </ul>
