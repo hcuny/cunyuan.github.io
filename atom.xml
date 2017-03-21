@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-21T11:24:14.152Z</updated>
+  <updated>2017-03-21T12:41:27.921Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,12 +20,21 @@
     <link href="http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/"/>
     <id>http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/</id>
     <published>2017-03-21T11:24:14.000Z</published>
-    <updated>2017-03-21T11:24:14.152Z</updated>
+    <updated>2017-03-21T12:41:27.921Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-Curse-of-Dimensionality-different-narrations"><a href="#1-Curse-of-Dimensionality-different-narrations" class="headerlink" title="1. Curse of Dimensionality: different narrations"></a>1. Curse of Dimensionality: different narrations</h2><h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p><a href="http://stats.stackexchange.com/questions/135853/lda-vs-svm-for-dimensionality-reduction" target="_blank" rel="external">Link1</a><br><a href="http://stats.stackexchange.com/questions/169436/how-lda-a-classification-technique-also-serves-as-dimensionality-reduction-tec" target="_blank" rel="external">Link2</a></p>
+]]></content>
     
     <summary type="html">
     
+      &lt;h2 id=&quot;1-Curse-of-Dimensionality-different-narrations&quot;&gt;&lt;a href=&quot;#1-Curse-of-Dimensionality-different-narrations&quot; class=&quot;headerlink&quot; title=&quot;
+    
     </summary>
     
+      <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -105,9 +114,9 @@
       <category term="Thesis" scheme="http://hcuny.github.io/categories/Research/Thesis/"/>
     
     
-      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
-    
       <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
+    
+      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
     
   </entry>
   
@@ -240,9 +249,9 @@
       <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
     
     
-      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
-    
       <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
+    
+      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
     
   </entry>
   
