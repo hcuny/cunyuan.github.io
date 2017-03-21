@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-20T19:37:44.803Z</updated>
+  <updated>2017-03-21T11:24:14.152Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dimension Reduction Techniques</title>
+    <link href="http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/"/>
+    <id>http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/</id>
+    <published>2017-03-21T11:24:14.000Z</published>
+    <updated>2017-03-21T11:24:14.152Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Summing Up Clustering</title>
@@ -91,9 +105,9 @@
       <category term="Thesis" scheme="http://hcuny.github.io/categories/Research/Thesis/"/>
     
     
-      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
-    
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -226,9 +240,9 @@
       <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
     
     
-      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
-    
       <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
