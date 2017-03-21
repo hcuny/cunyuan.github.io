@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-21T12:41:27.921Z</updated>
+  <updated>2017-03-21T18:58:33.644Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,9 +20,14 @@
     <link href="http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/"/>
     <id>http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/</id>
     <published>2017-03-21T11:24:14.000Z</published>
-    <updated>2017-03-21T12:41:27.921Z</updated>
+    <updated>2017-03-21T18:58:33.644Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1-Curse-of-Dimensionality-different-narrations"><a href="#1-Curse-of-Dimensionality-different-narrations" class="headerlink" title="1. Curse of Dimensionality: different narrations"></a>1. Curse of Dimensionality: different narrations</h2><h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p><a href="http://stats.stackexchange.com/questions/135853/lda-vs-svm-for-dimensionality-reduction" target="_blank" rel="external">Link1</a><br><a href="http://stats.stackexchange.com/questions/169436/how-lda-a-classification-technique-also-serves-as-dimensionality-reduction-tec" target="_blank" rel="external">Link2</a></p>
+    <content type="html"><![CDATA[<h2 id="1-Curse-of-Dimensionality-different-narrations"><a href="#1-Curse-of-Dimensionality-different-narrations" class="headerlink" title="1. Curse of Dimensionality: different narrations"></a>1. Curse of Dimensionality: different narrations</h2><blockquote>
+<p>Similarity function: Almost all pairs of points are equally far away from one another, and almost any two vectors are almost orthogonal.</p>
+<p>Statistical Inference: This sparsity is problematic for any method that requires statistical significance. In order to obtain a statistically sound and reliable result, the amount of data needed to support the result often grows exponentially with the dimensionality. Think about the features are supposed to be IDPT in a simple regression problem.</p>
+<p>General ML: Given finite number of data samples in a high-dimensional feature space with each feature having a number of possible values, an enormous amount of training data is required to ensure that there are several samples with each combination of values.</p>
+</blockquote>
+<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p><a href="http://stats.stackexchange.com/questions/135853/lda-vs-svm-for-dimensionality-reduction" target="_blank" rel="external">Link1</a><br><a href="http://stats.stackexchange.com/questions/169436/how-lda-a-classification-technique-also-serves-as-dimensionality-reduction-tec" target="_blank" rel="external">Link2</a></p>
 ]]></content>
     
     <summary type="html">
