@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-05-08T17:45:38.836Z</updated>
+  <updated>2017-05-08T19:10:37.007Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,14 +20,17 @@
     <link href="http://hcuny.github.io/2017/05/08/recommender/"/>
     <id>http://hcuny.github.io/2017/05/08/recommender/</id>
     <published>2017-05-08T17:34:56.000Z</published>
-    <updated>2017-05-08T17:45:38.836Z</updated>
+    <updated>2017-05-08T19:10:37.007Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><strong>Recommendation System</strong> is a facility of predicting user responses to options. Examples:</p>
 <ul>
 <li>Offering news articles to on-line newspaper readers, based on interest(topics) prediction.</li>
 <li>Online retailer suggestions, based on history purchase/search.<a id="more"></a>
-</li>
+Note: physical stores V.S. online institutions, not possible to tailor the store to individual customer, choice governed by overall popularity(sale performance).</li>
 </ul>
+<h2 id="Content-based-Recommendations"><a href="#Content-based-Recommendations" class="headerlink" title="Content-based Recommendations"></a>Content-based Recommendations</h2><p><strong>Similarity of Items is determined by measuring the similarity in their properties</strong>.</p>
+<h3 id="Item-profile"><a href="#Item-profile" class="headerlink" title="Item profile"></a>Item profile</h3><p>Collection of records representing important characteristics of that item. E.g.</p>
+<h2 id="Collaborative-Filtering"><a href="#Collaborative-Filtering" class="headerlink" title="Collaborative Filtering"></a>Collaborative Filtering</h2><p><strong>Similarity of Items is determined by the similarity of the ratings of those items by the users who have rated both of them</strong>.</p>
 ]]></content>
     
     <summary type="html">

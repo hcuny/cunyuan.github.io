@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[recommender]]></title>
       <url>%2F2017%2F05%2F08%2Frecommender%2F</url>
-      <content type="text"><![CDATA[OverviewRecommendation System is a facility of predicting user responses to options. Examples: Offering news articles to on-line newspaper readers, based on interest(topics) prediction. Online retailer suggestions, based on history purchase/search.]]></content>
+      <content type="text"><![CDATA[OverviewRecommendation System is a facility of predicting user responses to options. Examples: Offering news articles to on-line newspaper readers, based on interest(topics) prediction. Online retailer suggestions, based on history purchase/search. Note: physical stores V.S. online institutions, not possible to tailor the store to individual customer, choice governed by overall popularity(sale performance). Content-based RecommendationsSimilarity of Items is determined by measuring the similarity in their properties. Item profileCollection of records representing important characteristics of that item. E.g. Collaborative FilteringSimilarity of Items is determined by the similarity of the ratings of those items by the users who have rated both of them.]]></content>
     </entry>
 
     
