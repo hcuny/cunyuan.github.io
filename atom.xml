@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-05-08T17:42:34.562Z</updated>
+  <updated>2017-05-08T17:45:38.836Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,18 +20,22 @@
     <link href="http://hcuny.github.io/2017/05/08/recommender/"/>
     <id>http://hcuny.github.io/2017/05/08/recommender/</id>
     <published>2017-05-08T17:34:56.000Z</published>
-    <updated>2017-05-08T17:42:34.562Z</updated>
+    <updated>2017-05-08T17:45:38.836Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p><strong>Recommendation System</strong> is a facility of predicting user responses to options. Examples:</p>
+    <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><strong>Recommendation System</strong> is a facility of predicting user responses to options. Examples:</p>
 <ul>
 <li>Offering news articles to on-line newspaper readers, based on interest(topics) prediction.</li>
-<li>Online retailer suggestions, based on history purchase/search.</li>
+<li>Online retailer suggestions, based on history purchase/search.<a id="more"></a>
+</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Recommendation System&lt;/strong&gt; is a fa
+      &lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Recommendation System&lt;/strong&gt; is a facility of predicting user responses to options. Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Offering news articles to on-line newspaper readers, based on interest(topics) prediction.&lt;/li&gt;
+&lt;li&gt;Online retailer suggestions, based on history purchase/search.
     
     </summary>
     
