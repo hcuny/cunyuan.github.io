@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-05-08T19:10:37.007Z</updated>
+  <updated>2017-05-08T20:38:05.540Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hcuny.github.io/2017/05/08/recommender/"/>
     <id>http://hcuny.github.io/2017/05/08/recommender/</id>
     <published>2017-05-08T17:34:56.000Z</published>
-    <updated>2017-05-08T19:10:37.007Z</updated>
+    <updated>2017-05-08T20:38:05.540Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><strong>Recommendation System</strong> is a facility of predicting user responses to options. Examples:</p>
 <ul>
@@ -28,8 +28,10 @@
 <li>Online retailer suggestions, based on history purchase/search.<a id="more"></a>
 Note: physical stores V.S. online institutions, not possible to tailor the store to individual customer, choice governed by overall popularity(sale performance).</li>
 </ul>
-<h2 id="Content-based-Recommendations"><a href="#Content-based-Recommendations" class="headerlink" title="Content-based Recommendations"></a>Content-based Recommendations</h2><p><strong>Similarity of Items is determined by measuring the similarity in their properties</strong>.</p>
-<h3 id="Item-profile"><a href="#Item-profile" class="headerlink" title="Item profile"></a>Item profile</h3><p>Collection of records representing important characteristics of that item. E.g.</p>
+<h2 id="Content-based-Recommendations"><a href="#Content-based-Recommendations" class="headerlink" title="Content-based Recommendations"></a>Content-based Recommendations</h2><p><strong>Similarity of Items is determined by measuring the similarity in their properties</strong>. Why called content based? Goal is to create both an item profile consisting of feature-value pairs and user profile summarizing the preference of a user.</p>
+<h4 id="Item-profile"><a href="#Item-profile" class="headerlink" title="Item profile"></a>Item profile</h4><p>Collection of records representing important characteristics of that item. E.g. stars of a movie, released year, genre… these are features that are tend to be readily available, how about documents? One possible solution is to choose words whose TF-IDF higher than a given threshold to be the feature set.</p>
+<h4 id="User-profile"><a href="#User-profile" class="headerlink" title="User profile"></a>User profile</h4><p>Item profile is vectors describing items, user profile is vectors with the same components that describe the user’s preferences–need some aggregation.(naturally take the average)</p>
+<p>Eg1(categorical): 20% of the movies that user U likes(0/1) have Julia, profile for U will have 0.2 in component Julia.<br>Eg2(numerical): User U has average rating 3, there’re 3 movies he watched with Julia as a star, having rating 3, 4, 5, then corresponding Score is (0+1+2)/3=1. </p>
 <h2 id="Collaborative-Filtering"><a href="#Collaborative-Filtering" class="headerlink" title="Collaborative Filtering"></a>Collaborative Filtering</h2><p><strong>Similarity of Items is determined by the similarity of the ratings of those items by the users who have rated both of them</strong>.</p>
 ]]></content>
     
