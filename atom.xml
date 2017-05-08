@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hcuny.github.io/"/>
-  <updated>2017-03-21T18:58:33.644Z</updated>
+  <updated>2017-05-08T17:42:34.562Z</updated>
   <id>http://hcuny.github.io/</id>
   
   <author>
@@ -16,11 +16,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>recommender</title>
+    <link href="http://hcuny.github.io/2017/05/08/recommender/"/>
+    <id>http://hcuny.github.io/2017/05/08/recommender/</id>
+    <published>2017-05-08T17:34:56.000Z</published>
+    <updated>2017-05-08T17:42:34.562Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p><strong>Recommendation System</strong> is a facility of predicting user responses to options. Examples:</p>
+<ul>
+<li>Offering news articles to on-line newspaper readers, based on interest(topics) prediction.</li>
+<li>Online retailer suggestions, based on history purchase/search.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Recommendation System&lt;/strong&gt; is a fa
+    
+    </summary>
+    
+      <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GMM-HMM-EM</title>
+    <link href="http://hcuny.github.io/2017/04/08/GMM-HMM-EM/"/>
+    <id>http://hcuny.github.io/2017/04/08/GMM-HMM-EM/</id>
+    <published>2017-04-08T19:08:21.000Z</published>
+    <updated>2017-04-08T19:47:10.219Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://people.csail.mit.edu/rameshvs/content/gmm-em.pdf" target="_blank" rel="external">GMM</a>, <a href="https://www.cs.cmu.edu/~epxing/Class/10701-08s/recitation/em-hmm.pdf" target="_blank" rel="external">HMM</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://people.csail.mit.edu/rameshvs/content/gmm-em.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GMM&lt;/a&gt;, &lt;a href=&quot;https://www.cs.cmu.ed
+    
+    </summary>
+    
+      <category term="Study Notes" scheme="http://hcuny.github.io/categories/Study-Notes/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://hcuny.github.io/tags/Machine-Learning/"/>
+    
+      <category term="Statistics" scheme="http://hcuny.github.io/tags/Statistics/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dimension Reduction Techniques</title>
     <link href="http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/"/>
     <id>http://hcuny.github.io/2017/03/21/Dimension-Reduction-Techniques/</id>
     <published>2017-03-21T11:24:14.000Z</published>
-    <updated>2017-03-21T18:58:33.644Z</updated>
+    <updated>2017-03-21T19:19:51.929Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-Curse-of-Dimensionality-different-narrations"><a href="#1-Curse-of-Dimensionality-different-narrations" class="headerlink" title="1. Curse of Dimensionality: different narrations"></a>1. Curse of Dimensionality: different narrations</h2><blockquote>
 <p>Similarity function: Almost all pairs of points are equally far away from one another, and almost any two vectors are almost orthogonal.</p>

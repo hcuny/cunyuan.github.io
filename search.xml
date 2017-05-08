@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[recommender]]></title>
+      <url>%2F2017%2F05%2F08%2Frecommender%2F</url>
+      <content type="text"><![CDATA[OverviewRecommendation System is a facility of predicting user responses to options. Examples: Offering news articles to on-line newspaper readers, based on interest(topics) prediction. Online retailer suggestions, based on history purchase/search.]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[GMM-HMM-EM]]></title>
+      <url>%2F2017%2F04%2F08%2FGMM-HMM-EM%2F</url>
+      <content type="text"><![CDATA[GMM, HMM]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Dimension Reduction Techniques]]></title>
       <url>%2F2017%2F03%2F21%2FDimension-Reduction-Techniques%2F</url>
       <content type="text"><![CDATA[1. Curse of Dimensionality: different narrations Similarity function: Almost all pairs of points are equally far away from one another, and almost any two vectors are almost orthogonal. Statistical Inference: This sparsity is problematic for any method that requires statistical significance. In order to obtain a statistically sound and reliable result, the amount of data needed to support the result often grows exponentially with the dimensionality. Think about the features are supposed to be IDPT in a simple regression problem. General ML: Given finite number of data samples in a high-dimensional feature space with each feature having a number of possible values, an enormous amount of training data is required to ensure that there are several samples with each combination of values. 2.Link1Link2]]></content>
